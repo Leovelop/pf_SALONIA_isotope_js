@@ -1,0 +1,451 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Poiret+One&display=swap');
+
+@import "./reset.scss";
+@import "./variable.scss";
+
+
+body {
+    background: $colorBody;
+}
+
+#header {
+    width: $headerWid;
+    height: 100vh;
+    background: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: 0.5s;
+
+    h1 {
+        font: bold 30px/1 $fontTitle;
+        position: absolute;
+        top: 5vh;
+        left: 30px;
+
+        &:hover a {
+            color: $colorFont;
+
+            &::before,
+            &::after {
+                width: 100%;
+            }
+        }
+
+        a {
+            color: #eee;
+            transition: 0.5s 0.3s;
+            position: relative;
+
+            &::before,
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 0%;
+                height: 1px;
+                background: $colorFont;
+                transition: 0.5s;
+            }
+
+            &::before {
+                left: 0;
+                top: -10%;
+            }
+
+            &::after {
+                right: 0;
+                bottom: -10%;
+            }
+        }
+    }
+
+    .menu {
+        #gnb {
+            position: absolute;
+            width: 100%;
+            top: 20vh;
+            padding: 0px 30px;
+
+            li {
+                cursor: pointer;
+                transition: 0.5s;
+
+                &.on {
+                    background: #111;
+
+                    a {
+                        transform: translateX(10px);
+                        color: $colorFont;
+                    }
+                }
+
+                &:hover a {
+                    color: $colorFont;
+                }
+
+                a {
+                    display: inline-block;
+                    font: 17px/1 $fontTitle;
+                    color: #ddd;
+                    padding: 10px 0px;
+                    transition: 0.5s;
+                }
+            }
+        }
+
+        .util {
+            position: absolute;
+            left: 30px;
+            top: 40vh;
+
+            li {
+                float: left;
+                margin-right: 20px;
+
+                &:hover {
+                    a {
+                        border-color: $colorFont;
+
+                        i {
+                            color: $colorFont;
+                        }
+                    }
+                }
+
+                a {
+                    display: inline-block;
+                    border: 1px solid #aaa;
+                    border-radius: 50%;
+                    padding: 10px;
+                    transition: 0.5s;
+                    font-size: 0px;
+
+                    i {
+                        font-size: 18px;
+                        color: #ddd;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+
+    p {
+        position: absolute;
+        bottom: 10vh;
+        padding: 0px 30px;
+        color: #ddd;
+        font: 14px/1.3 $fontContent;
+    }
+}
+
+main {
+    position: relative;
+    margin-left: $headerWid;
+    padding: 30px;
+
+    #sort {
+        width: 100%;
+
+        $num: 4;
+
+        article {
+            width: calc(100% / $num);
+            float: left;
+            padding: 10px;
+
+            >div {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+
+                &:hover {
+                    img {
+                        //filter: saturate(100%);
+                        filter: blur(3px);
+                        transform: scale(1.1);
+                    }
+
+                    div h2,
+                    div p {
+                        @include fontEffectOn();
+                    }
+                }
+
+                div {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0;
+                    padding: 0px 30px;
+
+                    h2 {
+                        font: bold 22px/1 $fontTitle;
+                        color: #fff;
+                        letter-spacing: 1px;
+                        margin: 15px 0px;
+                        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+                        @include fontEffectOff();
+                    }
+
+                    p {
+                        font: 10px/1.2 $fontContent;
+                        color: #ddd;
+                        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+                        @include fontEffectOff($translateY : translateY(100%));
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    //filter: saturate(0%);
+                    transition: linear 0.3s;
+                }
+            }
+        }
+
+        @include floatRelease();
+    }
+
+    #popUp {
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        top: 0;
+        left: -100%;
+        opacity: 1;
+        transition: 1s;
+        z-index: 5;
+        padding: 20vmin 30vmin;
+
+        aside {
+            width: 100%;
+            height: 100%;
+
+            figure {
+                width: 100%;
+                height: 100%;
+                margin-bottom: 20px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .txt {
+                width: 100%;
+
+                h2 {
+                    font: bold 3vmin/1 $fontTitle;
+                    color: #ddd;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    font: 0.7vmin/1.3 $fontContent;
+                    color: #666;
+                    margin-bottom: 40px;
+                }
+
+                span {
+                    cursor: pointer;
+                    color: $colorFont;
+                    font: bold 20px/1 $fontTitle;
+                    position: relative;
+
+                    &::before,
+                    &::after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        width: 0%;
+                        height: 1px;
+                        background: $colorFont;
+                        transition: 0.5s;
+                    }
+
+                    &::before {
+                        left: 0;
+                        top: -10%;
+                    }
+
+                    &::after {
+                        right: 0;
+                        bottom: -20%;
+                    }
+
+                    &:hover {
+
+                        &::before,
+                        &::after {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        &.on {
+            opacity: 1;
+            left: 0%;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1599px) {
+    main {
+        #sort {
+
+            $num: 3;
+
+            article {
+                width: calc(100% / $num);
+            }
+        }
+
+        #popUp {
+            padding: 20vmin 15vmin;
+        }
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    #header {
+        width: 100%;
+        height: 120px;
+        position: relative;
+
+        h1 {
+            font: 30px/1 $fontTitle;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 30px;
+        }
+
+        .menu {
+            #gnb {
+                width: auto;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 155px;
+
+                li {
+                    float: left;
+                    margin-right: 20px;
+
+                    &.on {
+                        background: transparent;
+
+                        a {
+                            transform: translateX(0px);
+                        }
+                    }
+                }
+            }
+
+            .util {
+                left: auto;
+                right: 30px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        p {
+            opacity: 0;
+            text-indent: -9999px;
+        }
+    }
+
+    main {
+        position: relative;
+        margin-left: 0;
+
+        #sort {
+
+            $num: 3;
+
+            article {
+                width: calc(100% / $num);
+            }
+        }
+
+        #popUp {
+            padding: 20vmin 12vmin;
+        }
+    }
+}
+
+@media screen and (max-width: 899px) {
+    #header {
+        .menu {
+            .util {
+                display: none;
+            }
+        }
+    }
+
+    main {
+        #sort {
+
+            $num: 2;
+
+            article {
+                width: calc(100% / $num);
+            }
+        }
+
+        #popUp {
+            padding: 25vmin 10vmin;
+        }
+    }
+}
+
+@media screen and (max-width: 679px) {
+    #header {
+        height: 100px;
+
+        h1 {
+            font: 24px/1 $fontTitle;
+            top: 20px;
+            transform: translateY(0%);
+        }
+
+        .menu {
+            #gnb {
+                top: auto;
+                bottom: 5px;
+                transform: translateY(0%);
+                left: 30px;
+                padding: 0;
+            }
+        }
+    }
+
+    main {
+        #sort {
+
+            $num: 1;
+
+            article {
+                width: calc(100% / $num);
+            }
+        }
+
+        #popUp {
+            padding: 40vmin 10vmin;
+        }
+    }
+}

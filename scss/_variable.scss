@@ -1,0 +1,17 @@
+$colorFont : orange;
+$colorBody : #242422;
+$colorFrame : #333;
+$headerWid: 300px;
+$fontTitle: 'Poiret One';
+$fontContent : 'Noto Sans KR';
+
+@mixin fontEffectOff($translateY : translateY(-100%)) {
+    opacity: 0;
+    transition: 0.5s;
+    transform: $translateY;
+}
+
+@mixin fontEffectOn {
+    opacity: 1;
+    transform: translateY(0%);
+}
