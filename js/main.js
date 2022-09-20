@@ -12,7 +12,7 @@ window.addEventListener("load", () => {
   const header = document.querySelector("#header");
   const menu = header.querySelector(".menu");
   const btns = menu.querySelectorAll("#gnb li");
-  const btn = menu.querySelector("#gnb li.on");
+  let total = btns.length;
 
   //section#sort
   const articles = document.querySelectorAll("article");
@@ -24,13 +24,16 @@ window.addEventListener("load", () => {
 
 
   /* 이벤트 연결---------------------------------------- */
-  for (let el of btns) {
-    el.addEventListener("click", e => {
+  for(let i = 0; i < total; i++) {
+    btns[i].addEventListener("click", e => {
       e.preventDefault();
+      
+      let isOn = btns[i].classList.contains(className_on);
+      if(isOn) return;
 
       sortFrame(e);
       activation(btns, e);
-    });
+    })
   }
 
   for (let el of articles) {
