@@ -12,6 +12,7 @@ window.addEventListener("load", () => {
   const header = document.querySelector("#header");
   const menu = header.querySelector(".menu");
   const btns = menu.querySelectorAll("#gnb li");
+  const btn = menu.querySelector("#gnb li.on");
 
   //section#sort
   const articles = document.querySelectorAll("article");
