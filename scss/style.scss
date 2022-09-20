@@ -82,8 +82,10 @@ body {
           }
         }
 
-        &:hover a {
-          color: $colorFont;
+        &:hover {
+          a {
+            color: $colorFont;
+          }
         }
 
         a {
