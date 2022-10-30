@@ -116,6 +116,8 @@ body {
 #header .menu #gnb .sns {
   margin-top: 20px;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #header .menu #gnb .sns li {
   float: left;
