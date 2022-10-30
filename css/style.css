@@ -113,9 +113,11 @@ body {
   padding: 10px 0px;
   transition: 0.5s;
 }
+#header .menu #gnb .sns {
+  margin-top: 20px;
+}
 #header .menu #gnb .sns li {
   float: left;
-  margin-right: 20px;
 }
 #header .menu #gnb .sns li:hover a {
   border-color: orange;
