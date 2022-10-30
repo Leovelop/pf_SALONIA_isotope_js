@@ -97,43 +97,45 @@ body {
           transition: 0.5s;
         }
       }
-    }
 
-    .util {
-      position: absolute;
-      left: 30px;
-      top: 40vh;
-
-      li {
-        float: left;
-        margin-right: 20px;
-
-        &:hover {
-          a {
-            border-color: $colorFont;
-
-            i {
-              color: $colorFont;
+      .sns {
+        position: absolute;
+        left: 30px;
+        top: 40vh;
+  
+        li {
+          float: left;
+          margin-right: 20px;
+  
+          &:hover {
+            a {
+              border-color: $colorFont;
+  
+              i {
+                color: $colorFont;
+              }
             }
           }
-        }
-
-        a {
-          display: inline-block;
-          border: 1px solid #aaa;
-          border-radius: 50%;
-          padding: 10px;
-          transition: 0.5s;
-          font-size: 0px;
-
-          i {
-            font-size: 18px;
-            color: #ddd;
+  
+          a {
+            display: inline-block;
+            border: 1px solid #aaa;
+            border-radius: 50%;
+            padding: 10px;
             transition: 0.5s;
+            font-size: 0px;
+  
+            i {
+              font-size: 18px;
+              color: #ddd;
+              transition: 0.5s;
+            }
           }
         }
       }
     }
+
+    
   }
 
   p {

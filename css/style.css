@@ -113,22 +113,22 @@ body {
   padding: 10px 0px;
   transition: 0.5s;
 }
-#header .menu .util {
+#header .menu #gnb .sns {
   position: absolute;
   left: 30px;
   top: 40vh;
 }
-#header .menu .util li {
+#header .menu #gnb .sns li {
   float: left;
   margin-right: 20px;
 }
-#header .menu .util li:hover a {
+#header .menu #gnb .sns li:hover a {
   border-color: orange;
 }
-#header .menu .util li:hover a i {
+#header .menu #gnb .sns li:hover a i {
   color: orange;
 }
-#header .menu .util li a {
+#header .menu #gnb .sns li a {
   display: inline-block;
   border: 1px solid #aaa;
   border-radius: 50%;
@@ -136,7 +136,7 @@ body {
   transition: 0.5s;
   font-size: 0px;
 }
-#header .menu .util li a i {
+#header .menu #gnb .sns li a i {
   font-size: 18px;
   color: #ddd;
   transition: 0.5s;
