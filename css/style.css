@@ -116,11 +116,11 @@ body {
 #header .menu #gnb .sns {
   margin-top: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
 }
 #header .menu #gnb .sns li {
-  float: left;
+  margin-right: 15px;
 }
 #header .menu #gnb .sns li:hover a {
   border-color: orange;
