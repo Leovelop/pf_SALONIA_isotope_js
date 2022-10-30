@@ -115,6 +115,7 @@ body {
 }
 #header .menu #gnb .sns {
   margin-top: 20px;
+  display: flex;
 }
 #header .menu #gnb .sns li {
   float: left;
