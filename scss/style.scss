@@ -304,6 +304,11 @@ main {
       left: 0%;
     }
   }
+
+  .mask {
+    position: absolute;
+    z-index: 10;
+  }
 }
 
 
