@@ -27,7 +27,7 @@ window.addEventListener("load", () => {
 
   /* 이벤트 연결---------------------------------------- */
   setTimeout(()=> {
-
+    main.classList.add(className_on);
   }, 2000);
   
   for(let i = 0; i < total; i++) {

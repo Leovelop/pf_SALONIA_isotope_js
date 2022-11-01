@@ -152,7 +152,7 @@ body {
 main {
   position: relative;
   margin-left: 300px;
-  padding: 30px;
+  padding: 20px;
 }
 main.on #sort {
   opacity: 1;
@@ -162,6 +162,7 @@ main #sort {
   width: 100%;
   opacity: 0;
   transform: translateY(100px);
+  transition: 2.1s;
 }
 main #sort article {
   width: 25%;

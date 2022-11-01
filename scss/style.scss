@@ -150,7 +150,7 @@ body {
 main {
   position: relative;
   margin-left: $headerWid;
-  padding: 30px;
+  padding: 20px;
 
   &.on {
     #sort {
@@ -163,6 +163,7 @@ main {
     width: 100%;
     opacity: 0;
     transform: translateY(100px);
+    transition: 2.1s;
 
     $num: 4;
 
