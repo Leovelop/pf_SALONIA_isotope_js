@@ -14,6 +14,8 @@ window.addEventListener("load", () => {
   const btns = menu.querySelectorAll("#gnb li");
   let total = btns.length;
 
+  const main = document.querySelector("main");
+  
   //section#sort
   const articles = document.querySelectorAll("article");
 
@@ -24,6 +26,10 @@ window.addEventListener("load", () => {
 
 
   /* 이벤트 연결---------------------------------------- */
+  setTimeout(()=> {
+
+  }, 2000);
+  
   for(let i = 0; i < total; i++) {
     btns[i].addEventListener("click", e => {
       e.preventDefault();

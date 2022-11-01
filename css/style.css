@@ -160,6 +160,8 @@ main.on #sort {
 }
 main #sort {
   width: 100%;
+  opacity: 0;
+  transform: translateY(100px);
 }
 main #sort article {
   width: 25%;
