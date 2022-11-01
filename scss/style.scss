@@ -152,6 +152,13 @@ main {
   margin-left: $headerWid;
   padding: 30px;
 
+  &.on {
+    #sort {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
   #sort {
     width: 100%;
 

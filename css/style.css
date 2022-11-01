@@ -154,6 +154,10 @@ main {
   margin-left: 300px;
   padding: 30px;
 }
+main.on #sort {
+  opacity: 1;
+  transform: translateY(0px);
+}
 main #sort {
   width: 100%;
 }
