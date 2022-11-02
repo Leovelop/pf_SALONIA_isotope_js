@@ -162,7 +162,7 @@ main #sort {
   width: 100%;
   opacity: 0;
   transform: translateY(100px);
-  transition: 1s;
+  transition: 1.5s;
 }
 main #sort article {
   width: 25%;
