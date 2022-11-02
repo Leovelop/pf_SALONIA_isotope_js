@@ -152,18 +152,18 @@ main {
   margin-left: $headerWid;
   padding: 20px;
 
-  /*&.on {
+  &.on {
     #sort {
       opacity: 1;
       transform: translateY(0px);
     }
-  }*/
+  }
 
   #sort {
     width: 100%;
-    /*opacity: 0;
+    opacity: 0;
     transform: translateY(100px);
-    transition: 2.1s;*/
+    transition: 2.1s;
 
     $num: 4;
 

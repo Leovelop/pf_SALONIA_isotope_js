@@ -1,10 +1,6 @@
 window.addEventListener("load", () => {
   /* 전역변수 리스트---------------------------------------- */
-  const grid = new Isotope("section", {
-    itemSelection: "article",
-    columnWidth: "article",
-    transitionDuration: "1s"
-  });
+  let grid;
 
   const className_on = "on";
 
@@ -27,6 +23,12 @@ window.addEventListener("load", () => {
 
   /* 이벤트 연결---------------------------------------- */
   setTimeout(()=> {
+    grid = new Isotope("section", {
+      itemSelection: "article",
+      columnWidth: "article",
+      transitionDuration: "1s",
+    });
+    
     main.classList.add(className_on);
   }, 2000);
   

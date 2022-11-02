@@ -153,18 +153,16 @@ main {
   position: relative;
   margin-left: 300px;
   padding: 20px;
-  /*&.on {
-    #sort {
-      opacity: 1;
-      transform: translateY(0px);
-    }
-  }*/
+}
+main.on #sort {
+  opacity: 1;
+  transform: translateY(0px);
 }
 main #sort {
   width: 100%;
-  /*opacity: 0;
+  opacity: 0;
   transform: translateY(100px);
-  transition: 2.1s;*/
+  transition: 2.1s;
 }
 main #sort article {
   width: 25%;
