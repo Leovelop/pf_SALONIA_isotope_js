@@ -16,5 +16,14 @@
       "title" : "Velit, est quasi?",
       "content" : "Atque maiores minima, harum quam deserunt modi culpa recusandae et incidunt vero magni fuga."
     }
+  ],
+  "place" : [
+    {
+      "className" : "tools",
+      "src" : "./img/tools/pic",
+      "alt" : "미용 도구 이미지",
+      "title" : "Voluptate culpa aliquam nemo neque aliquid.",
+      "content" : "Atque maiores minima, harum quam deserunt modi culpa recusandae et incidunt vero magni fuga."
+    }
   ]
 }
