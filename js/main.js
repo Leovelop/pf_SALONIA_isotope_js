@@ -29,7 +29,7 @@ setTimeout(()=> {
   });
   
   main.classList.add(className_on);
-}, 1500);
+}, 2000);
 
 for(let i = 0; i < total; i++) {
   btns[i].addEventListener("click", e => {
