@@ -25,11 +25,11 @@ setTimeout(()=> {
   grid = new Isotope("section", {
     itemSelection: "article",
     columnWidth: "article",
-    transitionDuration: "1s",
+    transitionDuration: "1.5s",
   });
   
   main.classList.add(className_on);
-}, 1000);
+}, 2000);
 
 for(let i = 0; i < total; i++) {
   btns[i].addEventListener("click", e => {
