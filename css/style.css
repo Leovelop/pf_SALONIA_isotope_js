@@ -333,23 +333,22 @@ main #popUp.on {
   }
   #header .menu #gnb {
     position: absolute;
-    width: 100%;
-    top: 20vh;
-    padding: 0px 30px;
+    width: auto;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   #header .menu #gnb li {
-    cursor: pointer;
-    transition: 0.5s;
+    padding: 0px 10px;
   }
   #header .menu #gnb li.on {
-    background: #111;
+    background: transparent;
   }
   #header .menu #gnb li.on a {
-    transform: translateX(10px);
-    color: orange;
-  }
-  #header .menu #gnb li:hover a {
-    color: orange;
+    transform: translateX(0px);
   }
   #header .menu #gnb li a {
     display: inline-block;
@@ -359,13 +358,11 @@ main #popUp.on {
     transition: 0.5s;
   }
   #header .menu #gnb .sns {
-    margin-top: 20px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
+    margin-top: 0px;
   }
   #header .menu #gnb .sns li {
-    margin-right: 15px;
+    padding: 0px 5px;
+    margin-right: 5px;
   }
   #header .menu #gnb .sns li:hover a {
     border-color: orange;
