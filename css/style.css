@@ -340,6 +340,8 @@ main #popUp.on {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0px;
+    padding-right: 30px;
   }
   #header .menu #gnb li {
     padding: 0px 10px;
@@ -363,6 +365,9 @@ main #popUp.on {
   #header .menu #gnb .sns li {
     padding: 0px 5px;
     margin-right: 5px;
+  }
+  #header .menu #gnb .sns li:last-child {
+    margin-right: 0px;
   }
   #header .menu #gnb .sns li:hover a {
     border-color: orange;
