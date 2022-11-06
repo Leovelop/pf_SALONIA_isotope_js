@@ -321,14 +321,9 @@ main #popUp.on {
 }
 @media screen and (max-width: 1199px) {
   #header {
-    width: 300px;
-    height: 100vh;
-    background: #333;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    transition: 0.5s;
+    width: 100%;
+    height: 120px;
+    position: relative;
   }
   #header h1 {
     font: bold 30px/1 "Poiret One";
