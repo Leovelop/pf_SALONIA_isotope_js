@@ -335,13 +335,12 @@ main #popUp.on {
     position: absolute;
     width: auto;
     top: 50%;
-    right: 0px;
+    right: 30px;
     transform: translateY(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0px;
-    padding-right: 30px;
   }
   #header .menu #gnb li {
     padding: 0px 10px;
@@ -364,9 +363,6 @@ main #popUp.on {
   }
   #header .menu #gnb .sns li {
     padding: 0px 5px;
-    margin-right: 5px;
-  }
-  #header .menu #gnb .sns li:last-child {
     margin-right: 0px;
   }
   #header .menu #gnb .sns li:hover a {
