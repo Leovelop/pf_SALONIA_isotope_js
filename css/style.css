@@ -326,38 +326,10 @@ main #popUp.on {
     position: relative;
   }
   #header h1 {
-    font: bold 30px/1 "Poiret One";
+    font: bold 28px/1 "Poiret One";
     position: absolute;
-    top: 5vh;
-    left: 30px;
-  }
-  #header h1:hover a {
-    color: orange;
-  }
-  #header h1:hover a::before, #header h1:hover a::after {
-    width: 100%;
-  }
-  #header h1 a {
-    color: #eee;
-    transition: 0.5s 0.3s;
-    position: relative;
-  }
-  #header h1 a::before, #header h1 a::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 0%;
-    height: 1px;
-    background: orange;
-    transition: 0.5s;
-  }
-  #header h1 a::before {
-    left: 0;
-    top: -10%;
-  }
-  #header h1 a::after {
-    right: 0;
-    bottom: -10%;
+    top: 50%;
+    transform: translateY(-50%);
   }
   #header .menu #gnb {
     position: absolute;
