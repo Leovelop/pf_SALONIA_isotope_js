@@ -321,43 +321,158 @@ main #popUp.on {
 }
 @media screen and (max-width: 1199px) {
   #header {
+    width: 300px;
+    height: 100vh;
+    background: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: 0.5s;
+  }
+  #header h1 {
+    font: bold 30px/1 "Poiret One";
+    position: absolute;
+    top: 5vh;
+    left: 30px;
+  }
+  #header h1:hover a {
+    color: orange;
+  }
+  #header h1:hover a::before, #header h1:hover a::after {
+    width: 100%;
+  }
+  #header h1 a {
+    color: #eee;
+    transition: 0.5s 0.3s;
+    position: relative;
+  }
+  #header h1 a::before, #header h1 a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    background: orange;
+    transition: 0.5s;
+  }
+  #header h1 a::before {
+    left: 0;
+    top: -10%;
+  }
+  #header h1 a::after {
+    right: 0;
+    bottom: -10%;
+  }
+  #header .menu #gnb {
+    position: absolute;
+    width: 100%;
+    top: 20vh;
+    padding: 0px 30px;
+  }
+  #header .menu #gnb li {
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  #header .menu #gnb li.on {
+    background: #111;
+  }
+  #header .menu #gnb li.on a {
+    transform: translateX(10px);
+    color: orange;
+  }
+  #header .menu #gnb li:hover a {
+    color: orange;
+  }
+  #header .menu #gnb li a {
+    display: inline-block;
+    font: 17px/1 "Poiret One";
+    color: #ddd;
+    padding: 10px 0px;
+    transition: 0.5s;
+  }
+  #header .menu #gnb .sns {
+    margin-top: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  #header .menu #gnb .sns li {
+    margin-right: 15px;
+  }
+  #header .menu #gnb .sns li:hover a {
+    border-color: orange;
+  }
+  #header .menu #gnb .sns li:hover a i {
+    color: orange;
+  }
+  #header .menu #gnb .sns li a {
+    display: inline-block;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    padding: 10px;
+    transition: 0.5s;
+    font-size: 0px;
+  }
+  #header .menu #gnb .sns li a i {
+    font-size: 18px;
+    color: #ddd;
+    transition: 0.5s;
+  }
+  #header p {
+    position: absolute;
+    bottom: 10vh;
+    padding: 0px 30px;
+    color: #ddd;
+    font: 14px/1.3 "Noto Sans KR";
+  }
+
+  /*#header {
     width: 100%;
     height: 120px;
     position: relative;
-  }
-  #header h1 {
-    font: 30px/1 "Poiret One";
-    top: 50%;
-    transform: translateY(-50%);
-    left: 30px;
-  }
-  #header .menu #gnb {
-    width: auto;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 155px;
-  }
-  #header .menu #gnb li {
-    float: left;
-    margin-right: 20px;
-  }
-  #header .menu #gnb li.on {
-    background: transparent;
-  }
-  #header .menu #gnb li.on a {
-    transform: translateX(0px);
-  }
-  #header .menu .util {
-    left: auto;
-    right: 30px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  #header p {
-    opacity: 0;
-    text-indent: -9999px;
-  }
 
+    h1 {
+      font: 30px/1 $fontTitle;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 30px;
+    }
+
+    .menu {
+      #gnb {
+        width: auto;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 155px;
+
+        li {
+          float: left;
+          margin-right: 20px;
+
+          &.on {
+            background: transparent;
+
+            a {
+              transform: translateX(0px);
+            }
+          }
+        }
+      }
+
+      .util {
+        left: auto;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    p {
+      opacity: 0;
+      text-indent: -9999px;
+    }
+  }*/
   main {
     position: relative;
     margin-left: 0;

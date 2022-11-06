@@ -356,6 +356,144 @@ main {
 
 @media screen and (max-width: 1199px) {
   #header {
+    width: $headerWid;
+    height: 100vh;
+    background: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: 0.5s;
+  
+    h1 {
+      font: bold 30px/1 $fontTitle;
+      position: absolute;
+      top: 5vh;
+      left: 30px;
+  
+      &:hover a {
+        color: $colorFont;
+  
+        &::before,
+        &::after {
+          width: 100%;
+        }
+      }
+  
+      a {
+        color: #eee;
+        transition: 0.5s 0.3s;
+        position: relative;
+  
+        &::before,
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 0%;
+          height: 1px;
+          background: $colorFont;
+          transition: 0.5s;
+        }
+  
+        &::before {
+          left: 0;
+          top: -10%;
+        }
+  
+        &::after {
+          right: 0;
+          bottom: -10%;
+        }
+      }
+    }
+  
+    .menu {
+      
+      #gnb {
+        position: absolute;
+        width: 100%;
+        top: 20vh;
+        padding: 0px 30px;
+  
+        li {
+          cursor: pointer;
+          transition: 0.5s;
+  
+          &.on {
+            background: #111;
+  
+            a {
+              transform: translateX(10px);
+              color: $colorFont;
+            }
+          }
+  
+          &:hover {
+            a {
+              color: $colorFont;
+            }
+          }
+  
+          a {
+            display: inline-block;
+            font: 17px/1 $fontTitle;
+            color: #ddd;
+            padding: 10px 0px;
+            transition: 0.5s;
+          }
+        }
+  
+        .sns {
+          margin-top: 20px;
+          display: flex;
+          justify-content: left;
+          align-items: center;
+    
+          li {
+            margin-right: 15px;
+    
+            &:hover {
+              a {
+                border-color: $colorFont;
+    
+                i {
+                  color: $colorFont;
+                }
+              }
+            }
+    
+            a {
+              display: inline-block;
+              border: 1px solid #aaa;
+              border-radius: 50%;
+              padding: 10px;
+              transition: 0.5s;
+              font-size: 0px;
+    
+              i {
+                font-size: 18px;
+                color: #ddd;
+                transition: 0.5s;
+              }
+            }
+          }
+        }
+      }
+  
+      
+    }
+  
+    p {
+      position: absolute;
+      bottom: 10vh;
+      padding: 0px 30px;
+      color: #ddd;
+      font: 14px/1.3 $fontContent;
+    }
+  }
+  
+  /*#header {
     width: 100%;
     height: 120px;
     position: relative;
@@ -400,7 +538,7 @@ main {
       opacity: 0;
       text-indent: -9999px;
     }
-  }
+  }*/
 
   main {
     position: relative;
