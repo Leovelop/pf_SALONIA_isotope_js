@@ -457,26 +457,6 @@ main {
 }
 
 @media screen and (max-width: 679px) {
-  #header {
-    height: 100px;
-
-    h1 {
-      font: 24px/1 $fontTitle;
-      top: 20px;
-      transform: translateY(0%);
-    }
-
-    .menu {
-      #gnb {
-        top: auto;
-        bottom: 5px;
-        transform: translateY(0%);
-        left: 30px;
-        padding: 0;
-      }
-    }
-  }
-
   main {
     #sort {
 

@@ -392,22 +392,6 @@ main #popUp.on {
   }
 }
 @media screen and (max-width: 679px) {
-  #header {
-    height: 100px;
-  }
-  #header h1 {
-    font: 24px/1 "Poiret One";
-    top: 20px;
-    transform: translateY(0%);
-  }
-  #header .menu #gnb {
-    top: auto;
-    bottom: 5px;
-    transform: translateY(0%);
-    left: 30px;
-    padding: 0;
-  }
-
   main #sort article {
     width: 100%;
   }
