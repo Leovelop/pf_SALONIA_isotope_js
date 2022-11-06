@@ -438,13 +438,7 @@ main {
 }
 
 @media screen and (max-width: 899px) {
-  #header {
-    .menu {
-      .util {
-        display: none;
-      }
-    }
-  }
+  #header .menu #gnb .sns { display:  none; }
 
   main {
     #sort {

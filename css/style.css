@@ -380,7 +380,7 @@ main #popUp.on {
   }
 }
 @media screen and (max-width: 899px) {
-  #header .menu .util {
+  #header .menu #gnb .sns {
     display: none;
   }
 
