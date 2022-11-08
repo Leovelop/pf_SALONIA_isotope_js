@@ -103,24 +103,3 @@ function activePopUp(target) {
 
   popUp.classList.add(className_on);
 }
-
-/* 
-"tools" : [
-    {
-      "className" : "tools",
-      "src" : "./img/tools/pic",
-      "alt" : "미용 도구 이미지",
-      "title" : "Velit, est quasi?",
-      "content" : "Atque maiores minima, harum quam deserunt modi culpa recusandae et incidunt vero magni fuga."
-    }
-  ],
-  "place" : [
-    {
-      "className" : "place",
-      "src" : "./img/place/pic",
-      "alt" : "미용실 이미지",
-      "title" : "Voluptate culpa aliquam nemo neque aliquid.",
-      "content" : "Libero obcaecati voluptatum nobis aliquam, exercitationem, excepturi doloribus quae asperiores quibusdam necessitatibus quaerat alias ipsa."
-    }
-  ]
-*/
