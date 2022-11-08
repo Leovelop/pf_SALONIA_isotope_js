@@ -85,8 +85,3 @@ function activePopUp(target) {
 
   popUp.classList.add(className_on);
 }
-
-//article 생성 함수
-function createList(){
-  let htmls = "";
-}
