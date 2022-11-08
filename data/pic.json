@@ -4,8 +4,12 @@
       "className" : "hairdresser",
       "src" : "./img/hairdresser/pic",
       "alt" : "미용사 이미지",
-      "title" : "Lorem ipsum dolor sit.",
-      "content" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, veniam obcaecati?"
+      "content" : [
+        { 
+          "title" : "Lorem ipsum dolor sit.",
+          "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, veniam obcaecati?"
+        }
+      ]
     }
   ]
 }
