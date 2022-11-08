@@ -59,10 +59,11 @@ fetch("./data/hairdresser.json")
   })
   .then(json => {
     const hairInfo = json.hairdresser;
-    //console.log(hairInfo);
 
     let tags = "";
-    console.log(hairInfo);
+    hairInfo.map(data => {
+      console.log(data);
+    })
   });
 
 
