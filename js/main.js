@@ -53,14 +53,14 @@ close.addEventListener("click", () => {
   popUp.classList.remove("on");
 });
 
-fetch("./data/pic.json")
+/*fetch("./data/pic.json")
   .then(data => {
     return data.json();
   })
   .then(json => {
     const hairInfo = json.hairdresser;
     console.log(hairInfo.alt);
-  });
+  });*/
 
 
 /* 함수 선언---------------------------------------- */
