@@ -53,17 +53,22 @@ close.addEventListener("click", () => {
   popUp.classList.remove("on");
 });
 
-fetch("./data/hairdresser.json")
+fetch("./data/pic.json")
   .then(data => {
     return data.json();
   })
   .then(json => {
     const hairInfo = json.hairdresser;
+    const toolsInfo = json.tools;
 
     let tags = "";
-    hairInfo.map(data => {
-      console.log(data);
-    })
+    hairInfo.map(hairdata => {
+      console.log(hairdata);
+    });
+
+    toolsInfo.map(tooldata => {
+      console.log(tooldata);
+    });
   });
 
 
