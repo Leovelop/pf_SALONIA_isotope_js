@@ -60,6 +60,7 @@ fetch("./data/pic.json")
   .then(json => {
     const hairInfo = json.hairdresser;
     const toolsInfo = json.tools;
+    const placeInfo = json.place;
 
     let tags = "";
     hairInfo.map(hairdata => {
@@ -68,6 +69,10 @@ fetch("./data/pic.json")
 
     toolsInfo.map(tooldata => {
       console.log(tooldata);
+    });
+
+    placeInfo.map(placedata => {
+      console.log(placedata);
     });
   });
 
