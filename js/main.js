@@ -10,6 +10,7 @@ const btns = menu.querySelectorAll("#gnb li");
 let total = btns.length;
 
 const main = document.querySelector("main");
+const sort = main.querySelector("#sort");
 
 //section#sort
 const articles = document.querySelectorAll("article");
@@ -117,6 +118,11 @@ function activePopUp(target) {
 function callData(hair, place, tools) {
   let hairTags = "";
 
+  //? 구조가 어떻게 되어야 하는가?
+  /*
+  
+  */
+
   hair.map(data => {
     //console.log(data);
 
@@ -132,6 +138,7 @@ function callData(hair, place, tools) {
       </article>
     `;
 
+    //sort.innerHTML = hairTags;
     console.log(hairTags);
   });
 
