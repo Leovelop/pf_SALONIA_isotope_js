@@ -115,6 +115,8 @@ function activePopUp(target) {
 
 //json 반복 함수
 function callData(hair, place, tools){
+  let hairTags = "";
+  
   hair.map(data => {
     console.log(data);
   });
