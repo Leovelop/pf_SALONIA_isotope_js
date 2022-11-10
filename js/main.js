@@ -63,7 +63,7 @@ fetch("./data/pic.json")
     const placeInfo = json.place;
 
     let tags = "";
-    hairInfo.map(hairdata => {
+    /*hairInfo.map(hairdata => {
       console.log(hairdata);
     });
 
@@ -73,7 +73,7 @@ fetch("./data/pic.json")
 
     placeInfo.map(placedata => {
       console.log(placedata);
-    });
+    });*/
   });
 
 
