@@ -76,8 +76,8 @@ fetch("./data/pic.json")
     });*/
 
     callData(hairInfo);
-    callData(placeInfo);
-    callData(toolsInfo);
+    //callData(placeInfo);
+    //callData(toolsInfo);
   });
 
 
@@ -114,8 +114,8 @@ function activePopUp(target) {
 }
 
 //json 반복 함수
-function callData(info){
-  info.map(data => {
+function callData(hair, tools, place){
+  hair.map(data => {
     console.log(data);
   });
 }
