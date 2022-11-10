@@ -76,6 +76,7 @@ fetch("./data/pic.json")
     });*/
 
     callData(hairInfo);
+    callData(placeInfo);
   });
 
 
