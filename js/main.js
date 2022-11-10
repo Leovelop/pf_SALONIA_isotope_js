@@ -110,6 +110,8 @@ function activePopUp(target) {
 }
 
 //json 반복 함수
-function callData(){
-  
+function callData(info){
+  info.map(data => {
+
+  });
 }
