@@ -108,3 +108,8 @@ function activePopUp(target) {
 
   popUp.classList.add(className_on);
 }
+
+//json 반복 함수
+function callData(){
+  
+}
