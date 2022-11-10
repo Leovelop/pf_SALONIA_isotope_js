@@ -74,6 +74,8 @@ fetch("./data/pic.json")
     placeInfo.map(placedata => {
       console.log(placedata);
     });*/
+
+    callData(hairInfo);
   });
 
 
