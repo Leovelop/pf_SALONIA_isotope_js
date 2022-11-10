@@ -21,22 +21,22 @@ const close = popUp.querySelector("span");
 
 
 /* 이벤트 연결---------------------------------------- */
-setTimeout(()=> {
+setTimeout(() => {
   grid = new Isotope("section", {
     itemSelection: "article",
     columnWidth: "article",
     transitionDuration: "1s",
   });
-  
+
   main.classList.add(className_on);
 }, 2500);
 
-for(let i = 0; i < total; i++) {
+for (let i = 0; i < total; i++) {
   btns[i].addEventListener("click", e => {
     e.preventDefault();
-    
+
     let isOn = btns[i].classList.contains(className_on);
-    if(isOn) return;
+    if (isOn) return;
 
     sortFrame(e);
     activation(btns, e);
@@ -114,11 +114,25 @@ function activePopUp(target) {
 }
 
 //json 반복 함수
-function callData(hair, place, tools){
+function callData(hair, place, tools) {
   let hairTags = "";
-  
+
   hair.map(data => {
-    console.log(data);
+    //console.log(data);
+
+    hairTags = `
+      <article class="${data.className}">
+        <div>
+          <img src="${data.src}1.jpg" alt="${data.alt}1">
+          <div>
+            <h2>${data.content[0].title}</h2>
+            <p>${data.content[0].description}</p>
+          </div>
+        </div>
+      </article>
+    `;
+
+    console.log(hairTags);
   });
 
   place.map(data => {
