@@ -46,26 +46,15 @@ for (let i = 0; i < total; i++) {
 
 for (let el of articles) {
   el.addEventListener("click", e => {
+    e.preventDefault();
     activePopUp(e);
-  })
+  });
 }
 
 close.addEventListener("click", () => {
   popUp.classList.remove("on");
 });
 
-/*fetch("./data/pic.json")
-  .then(data => {
-    return data.json();
-  })
-  .then(json => {
-    const hairInfo = json.hairdresser;
-    const toolsInfo = json.tools;
-    const placeInfo = json.place;
-
-    
-    callData(hairInfo, placeInfo, toolsInfo);
-  });*/
 
 fetch("./data/data.json")
   .then(data => {
@@ -74,17 +63,17 @@ fetch("./data/data.json")
   .then(json => {
     const dataInfo = json.data;
     const contentInfo = json.content;
-    //console.log(dataInfo);
     let arr = [];
+    let conLen = 0;
+
     dataInfo.map(pic => {
-      //console.log(pic.className);
       arr.push(pic.className);
       console.log(arr);
     });
 
     contentInfo.map(txt => {
       console.log(txt);
-    })
+    });
   });
   
 
