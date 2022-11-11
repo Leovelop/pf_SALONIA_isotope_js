@@ -54,7 +54,7 @@ close.addEventListener("click", () => {
   popUp.classList.remove("on");
 });
 
-fetch("./data/pic.json")
+/*fetch("./data/pic.json")
   .then(data => {
     return data.json();
   })
@@ -65,7 +65,22 @@ fetch("./data/pic.json")
 
     
     callData(hairInfo, placeInfo, toolsInfo);
+  });*/
+
+fetch("./data/data.json")
+  .then(data => {
+    return data.json();
+  })
+  .then(json => {
+    const dataInfo = json.data;
+    let arr = [];
+    dataInfo.map(pic => {
+      console.log(pic.className);
+      //arr.push(pic.className);
+      //console.log(arr);
+    });
   });
+  
 
 
 /* 함수 선언---------------------------------------- */
