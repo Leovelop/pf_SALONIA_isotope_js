@@ -121,43 +121,6 @@ function activePopUp(target) {
   popUp.classList.add(className_on);
 }
 
-//json 반복 함수
-function callData(hair, place, tools) {
-  let hairTags = "";
-
-  //? 구조가 어떻게 되어야 하는가?
-  /*
-  
-  */
-
-  hair.map(data => {
-    //console.log(data);
-
-    hairTags = `
-      <article class="${data.className}">
-        <div>
-          <img src="${data.src}1.jpg" alt="${data.alt}1">
-          <div>
-            <h2>${data.content[0].title}</h2>
-            <p>${data.content[0].description}</p>
-          </div>
-        </div>
-      </article>
-    `;
-
-    //sort.innerHTML = hairTags;
-    console.log(hairTags);
-  });
-
-  place.map(data => {
-    console.log(data);
-  })
-
-  tools.map(data => {
-    console.log(data);
-  })
-}
-
 //html 생성 함수
 function callHTML(){
   let htmls = "";
