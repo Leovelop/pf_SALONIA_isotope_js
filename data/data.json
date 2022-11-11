@@ -22,8 +22,8 @@
     {
       "hairdresser": [
         {
-          "title": "Lorem ipsum dolor sit.",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, veniam obcaecati?"
+          "title": "Distinctio, veniam obcaecati?",
+          "description": "Dolore ullam necessitatibus minima, nesciunt odit non."
         },
         {
           "title": "Labore facilis excepturi sunt ea reiciendis!",
@@ -34,7 +34,7 @@
     {
       "tools": [
         {
-          "title": "Lorem ipsum dolor sit.",
+          "title": "Molestiae, voluptas!",
           "description": "Atque maiores minima, harum quam deserunt modi culpa recusandae et incidunt vero magni fuga."
         }
       ]
@@ -42,7 +42,7 @@
     {
       "place": [
         {
-          "title": "Lorem ipsum dolor sit.",
+          "title": "Nesciunt tempore repellendus at atque rem.",
           "description": "Libero obcaecati voluptatum nobis aliquam, exercitationem, excepturi doloribus quae asperiores quibusdam necessitatibus quaerat alias ipsa."
         }
       ]
