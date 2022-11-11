@@ -110,36 +110,3 @@ function callHTML(){
 
   
 }
-
-/* 
-"content": [
-    {
-      "hairdresser": [
-        {
-          "title": "Distinctio, veniam obcaecati?",
-          "description": "Dolore ullam necessitatibus minima, nesciunt odit non."
-        },
-        {
-          "title": "Labore facilis excepturi sunt ea reiciendis!",
-          "description": "Deserunt sunt enim sit, nobis corrupti maxime dolore praesentium natus similique magnam aliquam odio voluptates veniam."
-        }
-      ]
-    },
-    {
-      "tools": [
-        {
-          "title": "Molestiae, voluptas!",
-          "description": "Atque maiores minima, harum quam deserunt modi culpa recusandae et incidunt vero magni fuga."
-        }
-      ]
-    },
-    {
-      "place": [
-        {
-          "title": "Nesciunt tempore repellendus at atque rem.",
-          "description": "Libero obcaecati voluptatum nobis aliquam, exercitationem, excepturi doloribus quae asperiores quibusdam necessitatibus quaerat alias ipsa."
-        }
-      ]
-    }
-  ]
-*/
