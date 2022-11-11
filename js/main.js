@@ -73,12 +73,18 @@ fetch("./data/data.json")
   })
   .then(json => {
     const dataInfo = json.data;
+    const contentInfo = json.content;
+    //console.log(dataInfo);
     let arr = [];
     dataInfo.map(pic => {
       //console.log(pic.className);
-      arr.push(pic.content[0].hairdresser);
+      arr.push(pic.className);
       console.log(arr);
     });
+
+    contentInfo.map(txt => {
+      console.log(txt);
+    })
   });
   
 
@@ -155,4 +161,6 @@ function callData(hair, place, tools) {
 //html 생성 함수
 function callHTML(){
   let htmls = "";
+
+  
 }
