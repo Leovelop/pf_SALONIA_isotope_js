@@ -75,9 +75,9 @@ fetch("./data/data.json")
     const dataInfo = json.data;
     let arr = [];
     dataInfo.map(pic => {
-      console.log(pic.className);
-      //arr.push(pic.className);
-      //console.log(arr);
+      //console.log(pic.className);
+      arr.push(pic.content[0].hairdresser);
+      console.log(arr);
     });
   });
   

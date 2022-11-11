@@ -1,41 +1,33 @@
 {
-  "data" : [
+  "data": [
     {
-      "className": "hairdresser",
-      "src": "./img/hairdresser/pic",
-      "alt": "미용사 이미지",
+      "className": [
+        "hairdresser",
+        "tools",
+        "place"
+      ],
+      "src": [
+        "./img/hairdresser/pic",
+        "./img/tools/pic",
+        "./img/place/pic"
+      ],
+      "alt": [
+        "미용사 이미지",
+        "미용 도구 이미지",
+        "미용실 이미지"
+      ],
       "content": [
         {
-          "title": "Lorem ipsum dolor sit.",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, veniam obcaecati?"
-        },
-        {
-          "title": "Labore facilis excepturi sunt ea reiciendis!",
-          "description": "Deserunt sunt enim sit, nobis corrupti maxime dolore praesentium natus similique magnam aliquam odio voluptates veniam."
-        }
-      ]
-    },
-    {
-      "className": "tools",
-      "src": "./img/tools/pic",
-      "alt": "미용 도구 이미지",
-      "title": "Velit, est quasi?",
-      "content": [
-        {
-          "title": "Lorem ipsum dolor sit.",
-          "description": "Atque maiores minima, harum quam deserunt modi culpa recusandae et incidunt vero magni fuga."
-        }
-      ]
-    },
-    {
-      "className": "place",
-      "src": "./img/place/pic",
-      "alt": "미용실 이미지",
-      "title": "Voluptate culpa aliquam nemo neque aliquid.",
-      "content": [
-        {
-          "title" :"Lorem ipsum dolor sit.",
-          "description" : "Libero obcaecati voluptatum nobis aliquam, exercitationem, excepturi doloribus quae asperiores quibusdam necessitatibus quaerat alias ipsa."   
+          "hairdresser": [
+            {
+              "title": "Lorem ipsum dolor sit.",
+              "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, veniam obcaecati?"
+            },
+            {
+              "title": "Labore facilis excepturi sunt ea reiciendis!",
+              "description": "Deserunt sunt enim sit, nobis corrupti maxime dolore praesentium natus similique magnam aliquam odio voluptates veniam."
+            }
+          ]
         }
       ]
     }
