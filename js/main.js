@@ -151,3 +151,8 @@ function callData(hair, place, tools) {
     console.log(data);
   })
 }
+
+//html 생성 함수
+function callHTML(){
+  let htmls = "";
+}
