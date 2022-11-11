@@ -63,22 +63,8 @@ fetch("./data/pic.json")
     const toolsInfo = json.tools;
     const placeInfo = json.place;
 
-    let tags = "";
-    /*hairInfo.map(hairdata => {
-      console.log(hairdata);
-    });
-
-    toolsInfo.map(tooldata => {
-      console.log(tooldata);
-    });
-
-    placeInfo.map(placedata => {
-      console.log(placedata);
-    });*/
-
+    
     callData(hairInfo, placeInfo, toolsInfo);
-    //callData(placeInfo);
-    //callData(toolsInfo);
   });
 
 
