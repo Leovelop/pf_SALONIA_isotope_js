@@ -69,6 +69,7 @@ fetch("./data/data.json")
 
     dataInfo.map(pic => {
       let len = pic.className.length;
+      let picCon = "";
       //console.log(len);
       
       /*hairCon.map(con => {
@@ -83,6 +84,10 @@ fetch("./data/data.json")
           <article class="${pic.className[i]}">
             <div>
               <img src="${pic.src[k] + (k+1)}.jpg" alt="${pic.alt[i]+(k+1)}">
+              <div>
+                <h2></h2>
+                <p></p>
+              </div>
             </div>
           </article>
           `;
