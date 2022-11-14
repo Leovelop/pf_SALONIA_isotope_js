@@ -72,10 +72,18 @@ fetch("./data/data.json")
       
 
       conInfo.map(con => {
-        let tags_con = "";
-        console.log(con);
-
+        //let tags_con = "";
+        let con_hair = "";
         
+        //console.log(con);
+
+        con_hair = `
+          <h2>${con.hairdresser[0].title}</h2>
+          <p>${con.hairdresser[0].description}</p>
+        `;
+
+        console.log(con_hair);
+        //console.log(con.hairdresser.length);
       });
 
 
