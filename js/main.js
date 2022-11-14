@@ -63,20 +63,16 @@ fetch("./data/data.json")
   .then(json => {
     const dataInfo = json.data;
     const hairdresserCon = json.hairdresserCon;
+    const toolsCon = json.toolsCon;
+    const placeCon = json.placeCon;
+    let tags = "";
+    
     console.log(hairdresserCon.length);
     
-    let tags = "";
 
     dataInfo.map(pic => {
       let len = pic.className.length;
       let picCon = "";
-      //console.log(len);
-      
-      /*hairCon.map(con => {
-        console.log(con);
-      });*/
-      
-
 
       for(let k = 0; k < 2; k++){
         for(let i = 0; i < len; i++){
@@ -95,14 +91,6 @@ fetch("./data/data.json")
       }
 
       console.log(tags);
-
-      /*tags = `
-        <article class="${pic.className[0]}">
-          <div>
-            <img src="${pic.src[0]}.jpg">
-          </div>
-        </article>
-      `;*/
     });
   });
 
