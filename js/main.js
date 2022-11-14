@@ -64,20 +64,22 @@ fetch("./data/data.json")
     const dataInfo = json.data;
     const conInfo = json.content;
     
-    let arr = [];
     let tags = "";
 
     dataInfo.map(pic => {
       let len = pic.className.length;
       //console.log(len);
       
-      arr.push(pic);
-      //console.log(arr);
 
-      
+      conInfo.map(con => {
+        let tags_con = "";
+        console.log(con);
+
+        
+      });
 
 
-      for(let k = 0; k < 3; k++){
+      /*for(let k = 0; k < 3; k++){
         for(let i = 0; i < len; i++){
           tags += `
           <article class="${pic.className[i]}">
@@ -87,9 +89,9 @@ fetch("./data/data.json")
           </article>
           `;
         }
-      }
+      }*/
 
-      console.log(tags);
+      //console.log(tags);
 
       /*tags = `
         <article class="${pic.className[0]}">
