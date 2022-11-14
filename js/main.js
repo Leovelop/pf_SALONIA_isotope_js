@@ -77,19 +77,19 @@ fetch("./data/data.json")
       
 
 
-      for(let k = 0; k < 3; k++){
+      for(let k = 0; k < 2; k++){
         for(let i = 0; i < len; i++){
           tags += `
           <article class="${pic.className[i]}">
             <div>
-              <img src="${pic.src[k] + (k+1)}.jpg">
+              <img src="${pic.src[k] + (k+1)}.jpg" alt="${pic.alt[i]+(k+1)}">
             </div>
           </article>
           `;
         }
       }
 
-      //console.log(tags);
+      console.log(tags);
 
       /*tags = `
         <article class="${pic.className[0]}">
