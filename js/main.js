@@ -62,6 +62,8 @@ fetch("./data/data.json")
   })
   .then(json => {
     const dataInfo = json.data;
+    const conInfo = json.content;
+    
     let arr = [];
     let tags = "";
 
