@@ -65,11 +65,24 @@ fetch("./data/data.json")
     let arr = [];
 
     dataInfo.map(pic => {
-      arr.push(pic);
-      console.log(arr);
+      //arr.push(pic);
+      //console.log(arr);
+      console.log(pic);
     });
   });
-  
+
+fetch("./data/content.json")
+  .then(data => {
+    return data.json();
+  })
+  .then(json => {
+    const conInfo = json.content;
+    let arr = [];
+
+    conInfo.map(con => {
+      //console.log(con);
+    });
+  });
 
 
 /* 함수 선언---------------------------------------- */
