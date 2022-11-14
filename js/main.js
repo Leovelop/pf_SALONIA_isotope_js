@@ -56,8 +56,9 @@ close.addEventListener("click", () => {
   popUp.classList.remove("on");
 });
 
+//callHTML(url);
 
-fetch("./data/data.json")
+/*fetch("./data/data.json")
   .then(data => {
     return data.json();
   })
@@ -98,7 +99,7 @@ fetch("./data/data.json")
 
       console.log(tags);
     });
-  });
+  });*/
 
 
 /* 함수 선언---------------------------------------- */
@@ -136,4 +137,49 @@ function activePopUp(target) {
 //HTML 생성함수
 function callHTML(url){
   sort.innerHTML = "";
+  main.classList.remove(className_on);
+
+  fetch(url)
+  .then(data => {
+    return data.json();
+  })
+  .then(json => {
+    const dataInfo = json.data;
+    //const hairdresserCon = json.hairdresserCon;
+    //const toolsCon = json.toolsCon;
+    //const placeCon = json.placeCon;
+    let tags = "";
+    
+    //console.log(hairdresserCon);
+    
+
+    dataInfo.map(pic => {
+      let len = pic.className.length;
+      /*let con_title = "";
+      let con_desc = "";
+
+      hairdresserCon.map(hair => {
+        console.log(hair.title);
+      });*/
+
+      for(let k = 0; k < 12; k++){
+        for(let i = 0; i < len; i++){
+          tags += `
+          <article class="${pic.className[i]}">
+            <div>
+              <img src="${pic.src[i] + (k+1)}.jpg" alt="${pic.alt[i]+(k+1)}">
+              <div>
+                <h2></h2>
+                <p></p>
+              </div>
+            </div>
+          </article>
+          `;
+        }
+      }
+
+      console.log(tags);
+      sort.innerHTML = tags;
+    });
+  });
 }
