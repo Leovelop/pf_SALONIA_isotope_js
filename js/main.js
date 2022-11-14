@@ -75,7 +75,7 @@ fetch("./data/data.json")
         //let tags_con = "";
         let con_hair = "";
         
-        //console.log(con);
+        console.log(con);
 
         con_hair = `
           <h2>${con.hairdresser[0].title}</h2>
