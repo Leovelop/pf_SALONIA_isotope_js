@@ -2,6 +2,7 @@
 let grid;
 
 const className_on = "on";
+const url = `./data/data.json`;
 
 //header#header
 const header = document.querySelector("#header");
@@ -132,9 +133,7 @@ function activePopUp(target) {
   popUp.classList.add(className_on);
 }
 
-//html 생성 함수
-function callHTML(){
-  let htmls = "";
-
-  
+//HTML 생성함수
+function callHTML(url){
+  sort.innerHTML = "";
 }
