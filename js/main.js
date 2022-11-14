@@ -66,9 +66,36 @@ fetch("./data/data.json")
     let tags = "";
 
     dataInfo.map(pic => {
-      //arr.push(pic);
+      let len = pic.className.length;
+      //console.log(len);
+      
+      arr.push(pic);
       //console.log(arr);
-      console.log(pic);
+
+      
+
+
+      for(let k = 0; k < 3; k++){
+        for(let i = 0; i < len; i++){
+          tags += `
+          <article class="${pic.className[i]}">
+            <div>
+              <img src="${pic.src[k] + (k+1)}.jpg">
+            </div>
+          </article>
+          `;
+        }
+      }
+
+      console.log(tags);
+
+      /*tags = `
+        <article class="${pic.className[0]}">
+          <div>
+            <img src="${pic.src[0]}.jpg">
+          </div>
+        </article>
+      `;*/
     });
   });
 
