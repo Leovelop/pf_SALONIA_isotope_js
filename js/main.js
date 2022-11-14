@@ -67,12 +67,17 @@ fetch("./data/data.json")
     const placeCon = json.placeCon;
     let tags = "";
     
-    console.log(hairdresserCon.length);
+    //console.log(hairdresserCon);
     
 
     dataInfo.map(pic => {
       let len = pic.className.length;
-      let picCon = "";
+      let con_title = "";
+      let con_desc = "";
+
+      hairdresserCon.map(hair => {
+        console.log(hair.title);
+      });
 
       for(let k = 0; k < 2; k++){
         for(let i = 0; i < len; i++){
@@ -91,19 +96,6 @@ fetch("./data/data.json")
       }
 
       console.log(tags);
-    });
-  });
-
-fetch("./data/content.json")
-  .then(data => {
-    return data.json();
-  })
-  .then(json => {
-    const conInfo = json.content;
-    let arr = [];
-
-    conInfo.map(con => {
-      //console.log(con);
     });
   });
 
