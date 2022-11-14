@@ -63,6 +63,7 @@ fetch("./data/data.json")
   .then(json => {
     const dataInfo = json.data;
     let arr = [];
+    let tags = "";
 
     dataInfo.map(pic => {
       //arr.push(pic);
