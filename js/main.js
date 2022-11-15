@@ -14,7 +14,7 @@ const main = document.querySelector("main");
 const sort = main.querySelector("#sort");
 
 //section#sort
-const articles = document.querySelectorAll("article");
+const articles = sort.querySelectorAll("article");
 
 //section#popUp
 const popUp = document.querySelector("#popUp");
@@ -56,7 +56,7 @@ close.addEventListener("click", () => {
   popUp.classList.remove("on");
 });
 
-//callHTML(url);
+callHTML(url);
 
 /*fetch("./data/data.json")
   .then(data => {
@@ -145,29 +145,27 @@ function callHTML(url){
   })
   .then(json => {
     const dataInfo = json.data;
-    //const hairdresserCon = json.hairdresserCon;
-    //const toolsCon = json.toolsCon;
-    //const placeCon = json.placeCon;
+    const hairdresserCon = json.hairdresserCon;
+    const toolsCon = json.toolsCon;
+    const placeCon = json.placeCon;
     let tags = "";
     
-    //console.log(hairdresserCon);
+    console.log(hairdresserCon.length);
+    console.log(toolsCon.length);
+    console.log(placeCon.length);
     
 
     dataInfo.map(pic => {
       let len = pic.className.length;
-      /*let con_title = "";
+      let con_title = "";
       let con_desc = "";
 
-      hairdresserCon.map(hair => {
-        console.log(hair.title);
-      });*/
-
-      for(let k = 0; k < 12; k++){
-        for(let i = 0; i < len; i++){
+      for(let i = 0; i < 2; i++){
+        for(let j = 0; j < len; j++){
           tags += `
-          <article class="${pic.className[i]}">
+          <article class="${pic.className[j]}">
             <div>
-              <img src="${pic.src[i] + (k+1)}.jpg" alt="${pic.alt[i]+(k+1)}">
+              <img src="${pic.src[j] + (i+1)}.jpg" alt="${pic.alt[j]+(i+1)}">
               <div>
                 <h2></h2>
                 <p></p>
@@ -178,7 +176,7 @@ function callHTML(url){
         }
       }
 
-      console.log(tags);
+      //console.log(tags);
       sort.innerHTML = tags;
     });
   });
