@@ -10,10 +10,9 @@ const menu = header.querySelector(".menu");
 const btns = menu.querySelectorAll("#gnb li");
 let total = btns.length;
 
+//main
 const main = document.querySelector("main");
 const sort = main.querySelector("#sort");
-
-//section#sort
 const articles = sort.querySelectorAll("article");
 
 //section#popUp
@@ -23,8 +22,11 @@ const close = popUp.querySelector("span");
 
 
 /* 이벤트 연결---------------------------------------- */
+callHTML(url);
+
 setTimeout(() => {
-  grid = new Isotope("section", {
+  
+  grid = new Isotope("#sort", {
     itemSelection: "article",
     columnWidth: "article",
     transitionDuration: "1s",
@@ -49,6 +51,7 @@ for (let el of articles) {
   el.addEventListener("click", e => {
     e.preventDefault();
     activePopUp(e);
+    alert("hi");
   });
 }
 
@@ -56,50 +59,6 @@ close.addEventListener("click", () => {
   popUp.classList.remove("on");
 });
 
-callHTML(url);
-
-/*fetch("./data/data.json")
-  .then(data => {
-    return data.json();
-  })
-  .then(json => {
-    const dataInfo = json.data;
-    const hairdresserCon = json.hairdresserCon;
-    const toolsCon = json.toolsCon;
-    const placeCon = json.placeCon;
-    let tags = "";
-    
-    //console.log(hairdresserCon);
-    
-
-    dataInfo.map(pic => {
-      let len = pic.className.length;
-      let con_title = "";
-      let con_desc = "";
-
-      hairdresserCon.map(hair => {
-        console.log(hair.title);
-      });
-
-      for(let k = 0; k < 2; k++){
-        for(let i = 0; i < len; i++){
-          tags += `
-          <article class="${pic.className[i]}">
-            <div>
-              <img src="${pic.src[k] + (k+1)}.jpg" alt="${pic.alt[i]+(k+1)}">
-              <div>
-                <h2></h2>
-                <p></p>
-              </div>
-            </div>
-          </article>
-          `;
-        }
-      }
-
-      console.log(tags);
-    });
-  });*/
 
 
 /* 함수 선언---------------------------------------- */
@@ -123,6 +82,8 @@ function sortFrame(target) {
 
 //팝업 함수
 function activePopUp(target) {
+  console.log(target);
+
   let tit = target.currentTarget.querySelector("h2").innerText;
   let txt = target.currentTarget.querySelector("p").innerText;
   let src = target.currentTarget.querySelector("img").getAttribute("src");
@@ -135,49 +96,77 @@ function activePopUp(target) {
 }
 
 //HTML 생성함수
-function callHTML(url){
+function callHTML(url) {
   sort.innerHTML = "";
   main.classList.remove(className_on);
 
   fetch(url)
-  .then(data => {
-    return data.json();
-  })
-  .then(json => {
-    const dataInfo = json.data;
-    const hairdresserCon = json.hairdresserCon;
-    const toolsCon = json.toolsCon;
-    const placeCon = json.placeCon;
-    let tags = "";
-    
-    console.log(hairdresserCon.length);
-    console.log(toolsCon.length);
-    console.log(placeCon.length);
-    
+    .then(data => {
+      return data.json();
+    })
+    .then(json => {
+      const dataInfo = json.data;
+      const hairdresserCon = json.hairdresserCon;
+      const toolsCon = json.toolsCon;
+      const placeCon = json.placeCon;
+      let tags = "";
 
-    dataInfo.map(pic => {
-      let len = pic.className.length;
-      let con_title = "";
-      let con_desc = "";
+      dataInfo.map(pic => {
+        let len = pic.className.length;
+        let con_title = "";
+        let con_desc = "";
 
-      for(let i = 0; i < 2; i++){
-        for(let j = 0; j < len; j++){
-          tags += `
-          <article class="${pic.className[j]}">
-            <div>
-              <img src="${pic.src[j] + (i+1)}.jpg" alt="${pic.alt[j]+(i+1)}">
-              <div>
-                <h2></h2>
-                <p></p>
-              </div>
-            </div>
-          </article>
-          `;
+        //createCon(hairdresserCon);
+        //console.log(createCon(hairdresserCon)[0]);
+        //createCon(placeCon);
+        //createCon(toolsCon);
+
+        for (let i = 0; i < 12; i++) {
+          for (let j = 0; j < len; j++) {
+            if(j == 0) {
+              con_title = createCon(hairdresserCon)[0][i];
+              con_desc = createCon(hairdresserCon)[1][i];
+            } else if (j == 1) {
+              con_title = createCon(toolsCon)[0][i];
+              con_desc = createCon(toolsCon)[1][i];
+            } else if (j == 2) {
+              con_title = createCon(placeCon)[0][i];
+              con_desc = createCon(placeCon)[1][i];
+            }
+
+
+            tags += `
+              <article class="${pic.className[j]}">
+                <div>
+                  <img src="${pic.src[j] + (i + 1)}.jpg" alt="${pic.alt[j] + (i + 1)}">
+                  <div>
+                    <h2>${con_title}</h2>
+                    <p>${con_desc}</p>
+                  </div>
+                </div>
+              </article>
+            `;
+          }
         }
-      }
 
-      //console.log(tags);
+        //console.log(tags);
+      });
+
       sort.innerHTML = tags;
     });
+}
+
+//Content List 함수
+function createCon(items) {
+  let arr_title = [];
+  let arr_desc = [];
+  let len = 0;
+
+  items.map(data => {
+    arr_title.push(data.title);
+    arr_desc.push(data.description);
+    len = data.title.length;
   });
+
+  return [arr_title, arr_desc, len];
 }
