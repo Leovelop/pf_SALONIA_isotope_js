@@ -25,7 +25,7 @@ const close = popUp.querySelector("span");
 callHTML(url);
 
 setTimeout(() => {
-  
+
   grid = new Isotope("#sort", {
     itemSelection: "article",
     columnWidth: "article",
@@ -50,15 +50,14 @@ for (let i = 0; i < total; i++) {
 for (let el of articles) {
   el.addEventListener("click", e => {
     e.preventDefault();
+
     activePopUp(e);
-    alert("hi");
   });
 }
 
 close.addEventListener("click", () => {
   popUp.classList.remove("on");
 });
-
 
 
 /* 함수 선언---------------------------------------- */
@@ -113,17 +112,14 @@ function callHTML(url) {
 
       dataInfo.map(pic => {
         let len = pic.className.length;
+        let len_con = createCon(hairdresserCon)[2];
         let con_title = "";
         let con_desc = "";
 
-        //createCon(hairdresserCon);
-        //console.log(createCon(hairdresserCon)[0]);
-        //createCon(placeCon);
-        //createCon(toolsCon);
 
-        for (let i = 0; i < 12; i++) {
+        for (let i = 0; i < len_con; i++) {
           for (let j = 0; j < len; j++) {
-            if(j == 0) {
+            if (j == 0) {
               con_title = createCon(hairdresserCon)[0][i];
               con_desc = createCon(hairdresserCon)[1][i];
             } else if (j == 1) {
@@ -148,8 +144,6 @@ function callHTML(url) {
             `;
           }
         }
-
-        //console.log(tags);
       });
 
       sort.innerHTML = tags;
@@ -165,7 +159,7 @@ function createCon(items) {
   items.map(data => {
     arr_title.push(data.title);
     arr_desc.push(data.description);
-    len = data.title.length;
+    len = arr_title.length;
   });
 
   return [arr_title, arr_desc, len];
