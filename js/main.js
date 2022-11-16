@@ -99,8 +99,10 @@ function callHTML(url) {
       const toolsCon = json.toolsCon;
       const placeCon = json.placeCon;
 
-      createList(dataInfo, hairdresserCon, toolsCon, placeCon);
-      delayLoading();
+      if(dataInfo.length > 0) {
+        createList(dataInfo, hairdresserCon, toolsCon, placeCon);
+        delayLoading();
+      }
     });
 }
 
