@@ -110,8 +110,10 @@ function callHTML(url) {
       const placeCon = json.placeCon;
       let tags = "";
 
+      createList(dataInfo, hairdresserCon, toolsCon, placeCon);
+      delayLoading();
 
-      dataInfo.map(pic => {
+/*      dataInfo.map(pic => {
         let len = pic.className.length;
         let len_con = createCon(hairdresserCon)[2];
         let con_title = "";
@@ -144,13 +146,54 @@ function callHTML(url) {
             `;
           }
         }
-      });
+      });*/
 
-      sort.innerHTML = tags;
+      //delayLoading();
+      //sort.innerHTML = tags;
     });
 }
 
 //Content List 함수
+function createList(items, con1, con2, con3) {
+  let tags = "";
+
+  items.map(pic => {
+    let len = pic.className.length;
+    let len_con = createCon(con1)[2];
+    let con_title = "";
+    let con_desc = "";
+
+    for (let i = 0; i < len_con; i++) {
+      for (let j = 0; j < len; j++) {
+        if (j == 0) {
+          con_title = createCon(con1)[0][i];
+          con_desc = createCon(con1)[1][i];
+        } else if (j == 1) {
+          con_title = createCon(con2)[0][i];
+          con_desc = createCon(con2)[1][i];
+        } else if (j == 2) {
+          con_title = createCon(con3)[0][i];
+          con_desc = createCon(con3)[1][i];
+        }
+
+        tags += `
+              <article class="${pic.className[j]}">
+                <div>
+                  <img src="${pic.src[j] + (i + 1)}.jpg" alt="${pic.alt[j] + (i + 1)}">
+                  <div>
+                    <h2>${con_title}</h2>
+                    <p>${con_desc}</p>
+                  </div>
+                </div>
+              </article>
+        `;
+      }
+    }
+  });
+
+  sort.innerHTML = tags;
+}
+
 function createCon(items) {
   let arr_title = [];
   let arr_desc = [];
@@ -163,6 +206,12 @@ function createCon(items) {
   });
 
   return [arr_title, arr_desc, len];
+}
+
+function delayLoading() {
+  const imgs = sort.querySelectorAll("img");
+  const len = imgs.length;
+  console.log(imgs);
 }
 
 function isoLayout() {
