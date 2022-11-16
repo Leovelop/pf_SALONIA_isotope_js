@@ -1,5 +1,5 @@
 /* 전역변수 리스트---------------------------------------- */
-//let grid;
+let grid;
 
 const className_on = "on";
 const url = `./data/data.json`;
@@ -23,17 +23,6 @@ const close = popUp.querySelector("span");
 
 /* 이벤트 연결---------------------------------------- */
 callHTML(url);
-
-setTimeout(() => {
-
-  new Isotope("#sort", {
-    itemSelection: "article",
-    columnWidth: "article",
-    transitionDuration: "1s",
-  });
-
-  main.classList.add(className_on);
-}, 2500);
 
 for (let i = 0; i < total; i++) {
   btns[i].addEventListener("click", e => {
@@ -73,6 +62,7 @@ function activation(lists, active) {
 //정렬 함수
 function sortFrame(target) {
   const sort = target.currentTarget.querySelector("a").getAttribute("href");
+  console.log(sort);
 
   grid.arrange({
     filter: sort,
@@ -108,48 +98,9 @@ function callHTML(url) {
       const hairdresserCon = json.hairdresserCon;
       const toolsCon = json.toolsCon;
       const placeCon = json.placeCon;
-      let tags = "";
 
       createList(dataInfo, hairdresserCon, toolsCon, placeCon);
       delayLoading();
-
-/*      dataInfo.map(pic => {
-        let len = pic.className.length;
-        let len_con = createCon(hairdresserCon)[2];
-        let con_title = "";
-        let con_desc = "";
-
-        for (let i = 0; i < len_con; i++) {
-          for (let j = 0; j < len; j++) {
-            if (j == 0) {
-              con_title = createCon(hairdresserCon)[0][i];
-              con_desc = createCon(hairdresserCon)[1][i];
-            } else if (j == 1) {
-              con_title = createCon(toolsCon)[0][i];
-              con_desc = createCon(toolsCon)[1][i];
-            } else if (j == 2) {
-              con_title = createCon(placeCon)[0][i];
-              con_desc = createCon(placeCon)[1][i];
-            }
-
-
-            tags += `
-              <article class="${pic.className[j]}">
-                <div>
-                  <img src="${pic.src[j] + (i + 1)}.jpg" alt="${pic.alt[j] + (i + 1)}">
-                  <div>
-                    <h2>${con_title}</h2>
-                    <p>${con_desc}</p>
-                  </div>
-                </div>
-              </article>
-            `;
-          }
-        }
-      });*/
-
-      //delayLoading();
-      //sort.innerHTML = tags;
     });
 }
 
@@ -211,13 +162,21 @@ function createCon(items) {
 function delayLoading() {
   const imgs = sort.querySelectorAll("img");
   const len = imgs.length;
-  console.log(imgs);
+  let count = 0;
+
+  for (let el of imgs) {
+    el.onload = () => {
+      count++;
+
+      if (count == len) isoLayout();
+    }    
+  }
 }
 
 function isoLayout() {
   main.classList.add(className_on);
 
-  new Isotope("#sort", {
+  grid = new Isotope("#sort", {
     itemSelection: "article",
     columnWidth: "article",
     transitionDuration: "1s"
