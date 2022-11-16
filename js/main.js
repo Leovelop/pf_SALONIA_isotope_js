@@ -1,5 +1,5 @@
 /* 전역변수 리스트---------------------------------------- */
-let grid;
+//let grid;
 
 const className_on = "on";
 const url = `./data/data.json`;
@@ -26,7 +26,7 @@ callHTML(url);
 
 setTimeout(() => {
 
-  grid = new Isotope("#sort", {
+  new Isotope("#sort", {
     itemSelection: "article",
     columnWidth: "article",
     transitionDuration: "1s",
@@ -110,12 +110,12 @@ function callHTML(url) {
       const placeCon = json.placeCon;
       let tags = "";
 
+
       dataInfo.map(pic => {
         let len = pic.className.length;
         let len_con = createCon(hairdresserCon)[2];
         let con_title = "";
         let con_desc = "";
-
 
         for (let i = 0; i < len_con; i++) {
           for (let j = 0; j < len; j++) {
@@ -163,4 +163,14 @@ function createCon(items) {
   });
 
   return [arr_title, arr_desc, len];
+}
+
+function isoLayout() {
+  main.classList.add(className_on);
+
+  new Isotope("#sort", {
+    itemSelection: "article",
+    columnWidth: "article",
+    transitionDuration: "1s"
+  });
 }
