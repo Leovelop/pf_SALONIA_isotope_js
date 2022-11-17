@@ -48,15 +48,13 @@ fetch("./data/data copy.json")
   .then(json => {
     const hairInfo = json.hairdresserCon;
 
-    jsonTest(hairInfo);
+    jsonTest(hairInfo.title, hairInfo.description);
   });
 
 
-function jsonTest(item){
-  item.title.map(data => {
-    console.log(data);
-  });
-  console.log(item.title, item.description);
+function jsonTest(itemTitle, itemDesc){
+  
+  console.log(itemTitle, itemDesc);
 }
 
 /* 함수 선언---------------------------------------- */
