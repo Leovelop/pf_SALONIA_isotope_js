@@ -101,6 +101,9 @@ function callData(url) {
       const hairdresserCon = json.hairdresserCon;
       const toolsCon = json.toolsCon;
       const placeCon = json.placeCon;
+      const noCon = json.noCon;
+
+      console.log(noCon.title[0]);
 
       if(dataInfo.length > 0) {
         createHTML(dataInfo, hairdresserCon, toolsCon, placeCon);
@@ -156,12 +159,15 @@ function createCon(items) {
   let arr_title = [];
   let arr_desc = [];
   let len = 0;
+  let obj = {};
 
   items.map(data => {
     arr_title.push(data.title);
     arr_desc.push(data.description);
     len = arr_title.length;
+
   });
+  //console.log(arr_title);
 
   return [arr_title, arr_desc, len];
 }
@@ -183,7 +189,6 @@ function delayLoading() {
 
 //Isotope 실행, main에 .on추가하는 함수
 function isoLayout() {
-
   setTimeout(() => {
     grid = new Isotope("#sort", {
       itemSelection: "article",
