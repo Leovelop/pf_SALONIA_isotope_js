@@ -22,7 +22,7 @@ const close = popUp.querySelector("span");
 
 
 /* 이벤트 연결---------------------------------------- */
-callHTML(url);
+callData(url);
 
 for (let i = 0; i < total; i++) {
   btns[i].addEventListener("click", e => {
@@ -32,10 +32,11 @@ for (let i = 0; i < total; i++) {
     if (isOn) return;
 
     sortFrame(e);
-    activation(btns, e);
+    activeNav(btns, e);
   })
 }
 
+//팝업 닫는 이벤트
 close.addEventListener("click", () => {
   popUp.classList.remove("on");
 });
@@ -43,7 +44,7 @@ close.addEventListener("click", () => {
 
 /* 함수 선언---------------------------------------- */
 //선택한 메뉴에 .on 추가
-function activation(lists, active) {
+function activeNav(lists, active) {
   for (let el of lists) {
     el.classList.remove(className_on);
   }
@@ -54,17 +55,27 @@ function activation(lists, active) {
 //정렬 함수
 function sortFrame(target) {
   const sort = target.currentTarget.querySelector("a").getAttribute("href");
-  console.log(sort);
 
   grid.arrange({
     filter: sort,
   });
 }
 
+
+function active(){
+  const articles = sort.querySelectorAll("article");
+
+  for (let el of articles) {
+    el.addEventListener("click", e => {
+      e.preventDefault();
+
+      activePopUp(e);
+    });
+  }
+}
+
 //팝업 함수
 function activePopUp(target) {
-  console.log(target);
-
   let tit = target.currentTarget.querySelector("h2").innerText;
   let txt = target.currentTarget.querySelector("p").innerText;
   let src = target.currentTarget.querySelector("img").getAttribute("src");
@@ -76,8 +87,8 @@ function activePopUp(target) {
   popUp.classList.add(className_on);
 }
 
-//HTML 생성함수
-function callHTML(url) {
+//data.json파일 fetch로 받아오는 함수
+function callData(url) {
   sort.innerHTML = "";
   main.classList.remove(className_on);
 
@@ -92,15 +103,15 @@ function callHTML(url) {
       const placeCon = json.placeCon;
 
       if(dataInfo.length > 0) {
-        createList(dataInfo, hairdresserCon, toolsCon, placeCon);
+        createHTML(dataInfo, hairdresserCon, toolsCon, placeCon);
         delayLoading();
         active();
       }
     });
 }
 
-//Content List 함수
-function createList(items, con1, con2, con3) {
+//section#sort에 태그들을 생성하는 함수
+function createHTML(items, con1, con2, con3) {
   let tags = "";
 
   items.map(pic => {
@@ -140,6 +151,7 @@ function createList(items, con1, con2, con3) {
   sort.innerHTML = tags;
 }
 
+//data.json의 title, description키값 가져오는 함수
 function createCon(items) {
   let arr_title = [];
   let arr_desc = [];
@@ -154,18 +166,7 @@ function createCon(items) {
   return [arr_title, arr_desc, len];
 }
 
-function active(){
-  const articles = sort.querySelectorAll("article");
-
-  for (let el of articles) {
-    el.addEventListener("click", e => {
-      e.preventDefault();
-
-      activePopUp(e);
-    });
-  }
-}
-
+//이미지들이 전부 로딩이 되면 isoLayout()을 실행하는 함수
 function delayLoading() {
   const imgs = sort.querySelectorAll("img");
   const len = imgs.length;
@@ -180,6 +181,7 @@ function delayLoading() {
   }
 }
 
+//Isotope 실행, main에 .on추가하는 함수
 function isoLayout() {
 
   setTimeout(() => {
