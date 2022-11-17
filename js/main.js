@@ -36,13 +36,14 @@ for (let i = 0; i < total; i++) {
   })
 }
 
-for (let el of articles) {
+/*for (let el of articles) {
   el.addEventListener("click", e => {
     e.preventDefault();
 
     activePopUp(e);
   });
-}
+}*/
+
 
 close.addEventListener("click", () => {
   popUp.classList.remove("on");
@@ -102,6 +103,7 @@ function callHTML(url) {
       if(dataInfo.length > 0) {
         createList(dataInfo, hairdresserCon, toolsCon, placeCon);
         delayLoading();
+        active();
       }
     });
 }
@@ -159,6 +161,18 @@ function createCon(items) {
   });
 
   return [arr_title, arr_desc, len];
+}
+
+function active(){
+  const articles = sort.querySelectorAll("article");
+
+  for (let el of articles) {
+    el.addEventListener("click", e => {
+      e.preventDefault();
+
+      activePopUp(e);
+    });
+  }
 }
 
 function delayLoading() {
