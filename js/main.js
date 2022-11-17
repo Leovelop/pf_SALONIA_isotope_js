@@ -176,11 +176,14 @@ function delayLoading() {
 }
 
 function isoLayout() {
-  main.classList.add(className_on);
 
-  grid = new Isotope("#sort", {
-    itemSelection: "article",
-    columnWidth: "article",
-    transitionDuration: "1s"
-  });
+  setTimeout(() => {
+    grid = new Isotope("#sort", {
+      itemSelection: "article",
+      columnWidth: "article",
+      transitionDuration: "0.5s"
+    });
+    
+    main.classList.add(className_on);
+  }, 500);
 }
