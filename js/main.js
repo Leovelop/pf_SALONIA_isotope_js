@@ -101,9 +101,6 @@ function callData(url) {
       const hairdresserCon = json.hairdresserCon;
       const toolsCon = json.toolsCon;
       const placeCon = json.placeCon;
-      const noCon = json.noCon;
-
-      console.log(noCon.title[0]);
 
       if(dataInfo.length > 0) {
         createHTML(dataInfo, hairdresserCon, toolsCon, placeCon);
