@@ -19,156 +19,96 @@
     }
   ],
 
-  "hairdresserCon": [
-    {
-      "title": "Distinctio, veniam obcaecati?",
-      "description": "Dolore ullam necessitatibus minima, nesciunt odit non."
-    },
-    {
-      "title": "Labore facilis excepturi sunt ea reiciendis!",
-      "description": "Deserunt sunt enim sit, nobis corrupti maxime dolore praesentium natus similique magnam aliquam odio voluptates veniam."
-    },
-    {
-      "title": "Cumque magnam nemo aut fugit, rerum qui.",
-      "description": "Quibusdam maxime, hic saepe iste architecto nemo voluptatibus exercitationem fugit nobis velit voluptatum, excepturi est nulla."
-    },
-    {
-      "title": "Rem voluptates pariatur accusantium.",
-      "description": "Suscipit ullam beatae optio illo quisquam consequatur hic tempora eum error, cum ratione non corporis!"
-    },
-    {
-      "title": "Nobis dolores quam expedita.",
-      "description": "Beatae recusandae iste natus temporibus sint quibusdam error mollitia non dolorem molestias quam, qui atque."
-    },
-    {
-      "title": "Quae eveniet vitae quidem",
-      "description": "Sed dolorum quo minima porro aspernatur animi architecto explicabo voluptas nesciunt!"
-    },
-    {
-      "title": "Magnam minus et maiores ipsam.",
-      "description": "Numquam quibusdam sapiente tempora sequi ratione quod animi non placeat nisi reprehenderit."
-    },
-    {
-      "title": "Rem voluptatibus facilis",
-      "description": "Ab soluta minima iure porro ullam error expedita illum cum modi ad."
-    },
-    {
-      "title": "Cumque repellendus sint tempore?",
-      "description": "In repellat voluptates illo at similique impedit quia laborum sapiente, ducimus."
-    },
-    {
-      "title": "Vero sapiente natus voluptatum",
-      "description": "Dolor nulla voluptatum eligendi ex cupiditate eaque voluptates minima, quae eum mollitia eius!"
-    },
-    {
-      "title": "Sit quibusdam atque repellendus.",
-      "description": "Est autem soluta obcaecati non facere id voluptatibus quas, dolores nesciunt quod quidem."
-    },
-    {
-      "title": "Doloremque, inventore sunt?",
-      "description": "Amet rem eos velit labore facilis esse, pariatur tempore sint nihil fuga vel odio ad aliquid!"
-    }
-  ],
+  "hairdresserCon": {
+    "title": [
+      "Ea commodi dolorum nemo perferendis?",
+      "Qui atque optio rerum recusandae.",
+      "Sapiente qui assumenda impedit?",
+      "Ad voluptates aspernatur reprehenderit.",
+      "Obcaecati odio adipisci facilis.",
+      "Dolorum magnam laboriosam.",
+      "Laudantium accusamus ea consequatur.",
+      "Consequatur, sapiente.",
+      "Facere ipsum itaque beatae.",
+      "Iusto nemo aliquam corrupti autem.",
+      "Incidunt dolorem inventore debitis!",
+      "Debitis id expedita mollitia."
+    ],
+    "description": [
+      "Sapiente quibusdam deserunt quos modi tempora tempore reiciendis dolor minima.",
+      "Minus vero perferendis laboriosam harum nihil deserunt.",
+      "Odio voluptates ab nostrum unde quidem delectus eveniet.",
+      "Enim est laboriosam officia quasi cum placeat odio quo quam cupiditate.",
+      "Alias quibusdam atque sint laboriosam quis recusandae incidunt quas.",
+      "Vitae ut sit facere magni assumenda, quidem dolore.",
+      "Ab est, recusandae dolorum iste vero sequi amet fuga possimus a itaque eligendi deleniti quidem.",
+      "Itaque nostrum quae perspiciatis blanditiis placeat magni, commodi.",
+      "Repellendus pariatur maiores iure architecto repellat ipsa illum?",
+      "Iusto debitis officia amet eaque autem voluptatum, dicta molestias.",
+      "At qui ipsum laudantium sit doloribus beatae molestiae magni similique.",
+      "Voluptas officia, omnis modi vel perspiciatis odit deserunt cumque."
+    ]
+  },
 
-  "toolsCon": [
-    {
-      "title": "Molestiae, voluptas!",
-      "description": "Atque maiores minima, harum quam deserunt modi culpa recusandae et incidunt vero magni fuga."
-    },
-    {
-      "title": "Incidunt praesentium blanditiis aspernatur?",
-      "description": "Voluptatum assumenda numquam veritatis quas quis consequatur ad totam earum obcaecati nulla."
-    },
-    {
-      "title": "Aliquam explicabo quibusdam modi.",
-      "description": "Quaerat repellat asperiores atque aperiam impedit at beatae perspiciatis ipsam dolore, quos corrupti."
-    },
-    {
-      "title": "Modi sunt consequatur rem.",
-      "description": "Laudantium necessitatibus dolore temporibus esse id quis!"
-    },
-    {
-      "title": "Quo, esse?",
-      "description": "In nobis tenetur aut quod cupiditate sit cum possimus eveniet dolor voluptatem corporis atque temporibus"
-    },
-    {
-      "title": "Nostrum neque ea eius facere, modi incidunt.",
-      "description": "Veritatis aspernatur placeat distinctio nobis omnis porro commodi a voluptate?"
-    },
-    {
-      "title": "Fuga, ipsa mollitia.",
-      "description": "Quaerat nesciunt autem odit doloribus incidunt eaque, similique omnis odio accusantium maxime quod soluta natus."
-    },
-    {
-      "title": "Enim nulla harum illum.",
-      "description": "Ipsa quidem possimus, corrupti aperiam iure natus optio dolores voluptates, eius magnam."
-    },
-    {
-      "title": "Odit ratione repellat optio.",
-      "description": "Nisi fuga nobis deleniti, cum exercitationem qui blanditiis repellendus modi cumque ab ullam assumenda est."
-    },
-    {
-      "title": "Iure, nostrum possimus.",
-      "description": "Esse odio vitae iusto aut placeat exercitationem soluta itaque dignissimos."
-    },
-    {
-      "title": "Ratione a praesentium blanditiis molestiae.",
-      "description": "Quam, nihil iusto nulla illo repellendus mollitia iure quos vero hic dolorem qui velit."
-    },
-    {
-      "title": "Recusandae, ex. Alias, atque labore.",
-      "description": "Vel architecto error repudiandae consequuntur asperiores, similique velit nobis."
-    }
-  ],
+  "toolsCon": {
+    "title": [
+      "Impedit fugit ex ratione excepturi magnam!",
+      "Omnis aperiam cumque eaque obcaecati, velit nihil.",
+      "Ducimus, iste magnam.",
+      "In recusandae dolor cumque.",
+      "Aperiam omnis temporibus consequuntur.",
+      "Rerum, laborum praesentium.",
+      "Dolorum repellat quas commodi.",
+      "Quis vero quod quae!",
+      "Doloremque explicabo suscipit autem?",
+      "Tempore velit maxime debitis quam porro.",
+      "Modi accusamus aliquid.",
+      "Esse suscipit laudantium."
+    ],
+    "description": [
+      "Odit cum rerum quam reprehenderit velit qui animi provident!",
+      "Nam repudiandae pariatur asperiores facilis, dolorum sunt reiciendis.",
+      "Aliquam voluptates nemo totam architecto voluptatem eius!",
+      "Molestiae suscipit deserunt voluptas officiis placeat possimus pariatur.",
+      "Saepe, dolores tempora molestias vel architecto ut quos.",
+      "Quasi facere consequuntur illum fugit vitae, neque voluptas.",
+      "Dolore totam vitae atque unde quidem, modi provident adipisci.",
+      "Optio quis sint ullam voluptas illum cum velit autem omnis quas nobis.",
+      "Dolorum nobis veniam molestiae adipisci quod consequuntur omnis.",
+      "Odio provident numquam assumenda tempora libero commodi.",
+      "Distinctio deleniti sit dolorem mollitia magni exercitationem.",
+      "Culpa molestiae pariatur quae dolores odio harum saepe aperiam."
+    ]
+  },
 
-  "placeCon": [
-    {
-      "title": "Nesciunt repellendus at atque rem.",
-      "description": "Libero obcaecati voluptatum nobis aliquam, exercitationem, excepturi doloribus quae asperiores quibusdam necessitatibus quaerat alias ipsa."
-    },
-    {
-      "title": "Eligendi, nostrum veritatis.",
-      "description": "Nemo accusamus odio rerum cumque laborum maxime aspernatur, repellendus quia odit laboriosam."
-    },
-    {
-      "title": "Laudantium, non aspernatur.",
-      "description": "Voluptatum atque assumenda perspiciatis sed iste vero perferendis doloremque cum harum, distinctio."
-    },
-    {
-      "title": "Consequuntur culpa laborum adipisci.",
-      "description": "laboriosam eveniet error, assumenda quas impedit eos voluptatum voluptates accusantium sed?"
-    },
-    {
-      "title": "Sapiente temporibus fugiat neque.",
-      "description": "Omnis accusamus placeat fugiat sapiente reiciendis consequatur nulla porro hic nesciunt."
-    },
-    {
-      "title": "Temporibus distinctio exercitationem.",
-      "description": "Culpa repellat fuga illum ipsam in porro possimus repellendus saepe, natus architecto assumenda."
-    },
-    {
-      "title": "Explicabo maxime eius quas culpa!",
-      "description": "Cum quisquam earum officia repudiandae aut possimus illo incidunt quibusdam ad molestias fugiat in."
-    },
-    {
-      "title": "Ratione delectus sed eligendi saepe.",
-      "description": "Aliquid quia similique culpa delectus soluta magnam unde animi mollitia ut dolores."
-    },
-    {
-      "title": "Culpa porro vel dignissimos dolore.",
-      "description": "Laborum perferendis neque fugit quia doloremque ratione voluptatem aperiam distinctio."
-    },
-    {
-      "title": "Rem, natus saepe impedit eos.",
-      "description": "Deleniti placeat recusandae, est suscipit nam ducimus autem non a sapiente esse facilis."
-    },
-    {
-      "title": "Tempora cum odit nisi corrupti provident.",
-      "description": "Facere possimus adipisci consectetur est laboriosam optio magni officiis nam."
-    },
-    {
-      "title": "Deleniti animi voluptatibus.",
-      "description": "Similique sint enim sed ut voluptas eaque eligendi amet velit maiores."
-    }
-  ]
+  "placeCon": {
+    "title": [
+      "Animi at explicabo aliquid culpa!",
+      "Placeat minus ipsum vitae?",
+      "Nobis expedita.",
+      "Molestiae cum quod error dicta.",
+      "Illum mollitia.",
+      "Et aut sed corrupti deserunt nisi incidunt saepe.",
+      "Praesentium sunt in quam eaque debitis.",
+      "Quidem, beatae.",
+      "Provident ipsum explicabo eum similique corrupti quos nihil?",
+      "Accusamus fugit hic unde at voluptas?",
+      "Quis, molestiae natus.",
+      "Vitae, optio!"
+    ],
+    "description": [
+      "Asperiores magnam voluptatum vero, reiciendis esse adipisci.",
+      "Excepturi quasi vel, odio porro repellendus veniam eligendi magni quaerat.",
+      "Dolorum ratione consectetur voluptatum natus at voluptate.",
+      "Eum autem praesentium, dolorem corrupti ipsam repudiandae distinctio tempore ducimus.",
+      "Voluptates maiores quibusdam dignissimos fuga consequatur.",
+      "Facere id minus sequi cumque earum optio laboriosam aperiam at reprehenderit rem?",
+      "Enim placeat culpa aperiam beatae provident qui temporibus.",
+      "Corporis vitae mollitia beatae doloremque dolorum non quibusdam recusandae natus.",
+      "Voluptate reiciendis esse libero perferendis magnam enim!",
+      "Quo fugiat inventore veniam ipsum sapiente necessitatibus saepe dolores?",
+      "Aperiam aliquam nam dolorem possimus illum a unde accusantium.",
+      "Hic exercitationem, voluptate a quam ab amet aliquam ullam ut porro unde?"
+    ]
+  }
 }

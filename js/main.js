@@ -41,6 +41,20 @@ close.addEventListener("click", () => {
   popUp.classList.remove("on");
 });
 
+fetch("./data/data copy.json")
+  .then(data => {
+    return data.json();
+  })
+  .then(json => {
+    const hairInfo = json.hairdresserCon;
+
+    jsonTest(hairInfo.title, hairInfo.description);
+  });
+
+
+function jsonTest(itemTitle, itemDesc){
+  console.log(itemTitle, itemDesc);
+}
 
 /* 함수 선언---------------------------------------- */
 //선택한 메뉴에 .on 추가
@@ -116,13 +130,13 @@ function createHTML(items, con1, con2, con3) {
 
   items.map(pic => {
     let len = pic.className.length;
-    let len_con = createCon(con1)[2];
+    //let len_con = createCon(con1)[2];
     let con_title = "";
     let con_desc = "";
 
-    for (let i = 0; i < len_con; i++) {
+    for (let i = 0; i < 3; i++) {
       for (let j = 0; j < len; j++) {
-        if (j == 0) {
+        /*if (j == 0) {
           con_title = createCon(con1)[0][i];
           con_desc = createCon(con1)[1][i];
         } else if (j == 1) {
@@ -131,7 +145,7 @@ function createHTML(items, con1, con2, con3) {
         } else if (j == 2) {
           con_title = createCon(con3)[0][i];
           con_desc = createCon(con3)[1][i];
-        }
+        }*/
 
         tags += `
               <article class="${pic.className[j]}">
@@ -149,6 +163,12 @@ function createHTML(items, con1, con2, con3) {
   });
 
   sort.innerHTML = tags;
+}
+
+function createCon2(itemTitle, itemDesc){
+  let len = 0;
+
+  
 }
 
 //data.json의 title, description키값 가져오는 함수
