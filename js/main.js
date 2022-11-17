@@ -48,12 +48,15 @@ fetch("./data/data copy.json")
   .then(json => {
     const hairInfo = json.hairdresserCon;
 
-    jsonTest(hairInfo.title, hairInfo.description);
+    jsonTest(hairInfo);
   });
 
 
-function jsonTest(itemTitle, itemDesc){
-  console.log(itemTitle, itemDesc);
+function jsonTest(item){
+  item.title.map(data => {
+    console.log(data);
+  });
+  console.log(item.title, item.description);
 }
 
 /* 함수 선언---------------------------------------- */
@@ -137,7 +140,7 @@ function createHTML(items, con1, con2, con3) {
     for (let i = 0; i < 3; i++) {
       for (let j = 0; j < len; j++) {
         /*if (j == 0) {
-          con_title = createCon(con1)[0][i];
+          con_title = jsonTest(hairInfo.title[i]);
           con_desc = createCon(con1)[1][i];
         } else if (j == 1) {
           con_title = createCon(con2)[0][i];
