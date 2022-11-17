@@ -36,15 +36,6 @@ for (let i = 0; i < total; i++) {
   })
 }
 
-/*for (let el of articles) {
-  el.addEventListener("click", e => {
-    e.preventDefault();
-
-    activePopUp(e);
-  });
-}*/
-
-
 close.addEventListener("click", () => {
   popUp.classList.remove("on");
 });
@@ -195,7 +186,7 @@ function isoLayout() {
     grid = new Isotope("#sort", {
       itemSelection: "article",
       columnWidth: "article",
-      transitionDuration: "0.5s"
+      transitionDuration: "1s"
     });
     
     main.classList.add(className_on);
