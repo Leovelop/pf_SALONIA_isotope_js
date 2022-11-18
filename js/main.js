@@ -136,13 +136,11 @@ function createHTML(items, con1, con2, con3) {
       return;
     }
 
-    
-
     for (let i = 0; i < 3; i++) {
       for (let j = 0; j < len; j++) {
         /*if (j == 0) {
-          con_title = jsonTest(hairInfo).title[i];
-          con_desc = jsonTest(hairInfo).desc[i];
+          con_title = createCon(con1)[0][i];
+          con_desc = createCon(con1)[1][i];
         } else if (j == 1) {
           con_title = createCon(con2)[0][i];
           con_desc = createCon(con2)[1][i];
@@ -171,8 +169,8 @@ function createHTML(items, con1, con2, con3) {
 
 function createCon2(itemTitle, itemDesc){
   let len = 0;
+  let arr
 
-  
 }
 
 //data.json의 title, description키값 가져오는 함수
