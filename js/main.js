@@ -41,18 +41,9 @@ close.addEventListener("click", () => {
   popUp.classList.remove("on");
 });
 
-fetch("./data/data copy.json")
-  .then(data => {
-    return data.json();
-  })
-  .then(json => {
-    const hairInfo = json.hairdresserCon;
-
-    jsonTest(hairInfo);
-    //console.log(jsonTest(hairInfo));
-  });
 
 
+/* 함수 선언---------------------------------------- */
 function jsonTest(items){
   let title = items.title;
   let desc = items.description;
@@ -63,7 +54,6 @@ function jsonTest(items){
   };
 }
 
-/* 함수 선언---------------------------------------- */
 //선택한 메뉴에 .on 추가
 function activeNav(lists, active) {
   for (let el of lists) {
