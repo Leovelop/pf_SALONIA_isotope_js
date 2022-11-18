@@ -131,10 +131,12 @@ function createHTML(items, con1, con2, con3) {
     let con_title = "";
     let con_desc = "";
 
-    if((len != pic.src.length) && (len != pic.alt.length)) {
+    if((len != pic.src.length) || (len != pic.alt.length)) {
       console.error("data.json의 data키의 className, src, alt의 키값 개수를 똑같이 맞춰주십시오.");
       return;
     }
+
+    
 
     for (let i = 0; i < 3; i++) {
       for (let j = 0; j < len; j++) {
@@ -148,7 +150,7 @@ function createHTML(items, con1, con2, con3) {
           con_title = createCon(con3)[0][i];
           con_desc = createCon(con3)[1][i];
         }*/
-
+        
         tags += `
               <article class="${pic.className[j]}">
                 <div>
@@ -183,7 +185,6 @@ function createCon(items) {
     arr_title.push(data.title);
     arr_desc.push(data.description);
     len = arr_title.length;
-
   });
 
   return [arr_title, arr_desc, len];
