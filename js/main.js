@@ -188,7 +188,6 @@ function createCon(items) {
   let arr_title = [];
   let arr_desc = [];
   let len = 0;
-  let obj = {};
 
   items.map(data => {
     arr_title.push(data.title);
@@ -196,7 +195,6 @@ function createCon(items) {
     len = arr_title.length;
 
   });
-  //console.log(arr_title);
 
   return [arr_title, arr_desc, len];
 }
