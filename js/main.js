@@ -48,13 +48,19 @@ fetch("./data/data copy.json")
   .then(json => {
     const hairInfo = json.hairdresserCon;
 
-    jsonTest(hairInfo.title, hairInfo.description);
+    jsonTest(hairInfo);
+    //console.log(jsonTest(hairInfo));
   });
 
 
-function jsonTest(itemTitle, itemDesc){
+function jsonTest(items){
+  let title = items.title;
+  let desc = items.description;
   
-  console.log(itemTitle, itemDesc);
+  return {
+    title: title,
+    desc: desc
+  };
 }
 
 /* 함수 선언---------------------------------------- */
@@ -135,11 +141,16 @@ function createHTML(items, con1, con2, con3) {
     let con_title = "";
     let con_desc = "";
 
+    if((len != pic.src.length) && (len != pic.alt.length)) {
+      console.error("data.json의 data키의 className, src, alt의 키값 개수를 똑같이 맞춰주십시오.");
+      return;
+    }
+
     for (let i = 0; i < 3; i++) {
       for (let j = 0; j < len; j++) {
         /*if (j == 0) {
-          con_title = jsonTest(hairInfo.title[i]);
-          con_desc = createCon(con1)[1][i];
+          con_title = jsonTest(hairInfo).title[i];
+          con_desc = jsonTest(hairInfo).desc[i];
         } else if (j == 1) {
           con_title = createCon(con2)[0][i];
           con_desc = createCon(con2)[1][i];
