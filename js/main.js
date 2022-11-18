@@ -115,6 +115,7 @@ function callData(url) {
 
       if(dataInfo.length > 0) {
         createHTML(dataInfo, hairdresserCon, toolsCon, placeCon);
+        createCon2(hairdresserCon);
         delayLoading();
         active();
       }
@@ -138,16 +139,6 @@ function createHTML(items, con1, con2, con3) {
 
     for (let i = 0; i < 3; i++) {
       for (let j = 0; j < len; j++) {
-        /*if (j == 0) {
-          con_title = createCon(con1)[0][i];
-          con_desc = createCon(con1)[1][i];
-        } else if (j == 1) {
-          con_title = createCon(con2)[0][i];
-          con_desc = createCon(con2)[1][i];
-        } else if (j == 2) {
-          con_title = createCon(con3)[0][i];
-          con_desc = createCon(con3)[1][i];
-        }*/
         
         tags += `
               <article class="${pic.className[j]}">
@@ -167,10 +158,25 @@ function createHTML(items, con1, con2, con3) {
   sort.innerHTML = tags;
 }
 
-function createCon2(itemTitle, itemDesc){
-  let len = 0;
-  let arr
+function createCon2(item){
+  let title = item.title;
+  let desc = item.description;
+  let len = title.length;
 
+  if(len != desc.length) {
+    console.error("title과 desc의 키값 개수를 동일하게 맞춰주십시오.");
+    return;
+  }
+
+  title.forEach((el, index) => {
+    
+  });
+
+  return {
+    title: title, 
+    desc: desc,
+    len: len
+  };
 }
 
 //data.json의 title, description키값 가져오는 함수
