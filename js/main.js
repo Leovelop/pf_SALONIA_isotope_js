@@ -115,7 +115,6 @@ function callData(url) {
 
       if(dataInfo.length > 0) {
         createHTML(dataInfo, hairdresserCon, toolsCon, placeCon);
-        createCon2(hairdresserCon);
         delayLoading();
         active();
       }
@@ -128,17 +127,29 @@ function createHTML(items, con1, con2, con3) {
 
   items.map(pic => {
     let len = pic.className.length;
-    //let len_con = createCon(con1)[2];
+    let len_con = createCon(con1).len;
     let con_title = "";
     let con_desc = "";
 
     if((len != pic.src.length) || (len != pic.alt.length)) {
       console.error("data.json의 data키의 className, src, alt의 키값 개수를 똑같이 맞춰주십시오.");
       return;
+    }else if ((len_con != createCon(con2).len) || (len_con != createCon(con3).len)) {
+      console.error("")
     }
 
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < len_con; i++) {
       for (let j = 0; j < len; j++) {
+        if(j == 0) {
+          con_title = createCon(con1).title[i];
+          con_desc = createCon(con1).desc[i];
+        } else if (j == 1) {
+          con_title = createCon(con2).title[i];
+          con_desc = createCon(con2).desc[i];
+        } else {
+          con_title = createCon(con3).title[i];
+          con_desc = createCon(con3).desc[i];
+        }
         
         tags += `
               <article class="${pic.className[j]}">
@@ -158,7 +169,8 @@ function createHTML(items, con1, con2, con3) {
   sort.innerHTML = tags;
 }
 
-function createCon2(item){
+//data.json의 title, description키값 가져오는 함수
+function createCon(item){
   let title = item.title;
   let desc = item.description;
   let len = title.length;
@@ -168,10 +180,6 @@ function createCon2(item){
     return;
   }
 
-  title.forEach((el, index) => {
-    
-  });
-
   return {
     title: title, 
     desc: desc,
@@ -179,20 +187,6 @@ function createCon2(item){
   };
 }
 
-//data.json의 title, description키값 가져오는 함수
-function createCon(items) {
-  let arr_title = [];
-  let arr_desc = [];
-  let len = 0;
-
-  items.map(data => {
-    arr_title.push(data.title);
-    arr_desc.push(data.description);
-    len = arr_title.length;
-  });
-
-  return [arr_title, arr_desc, len];
-}
 
 //이미지들이 전부 로딩이 되면 isoLayout()을 실행하는 함수
 function delayLoading() {
