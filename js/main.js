@@ -135,7 +135,8 @@ function createHTML(items, con1, con2, con3) {
       console.error("data.json의 data키의 className, src, alt의 키값 개수를 똑같이 맞춰주십시오.");
       return;
     }else if ((len_con != createCon(con2).len) || (len_con != createCon(con3).len)) {
-      console.error("")
+      console.error("pic.jpg들의 개수를 똑같이 맞춰주십시오.");
+      return;
     }
 
     for (let i = 0; i < len_con; i++) {
