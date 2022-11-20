@@ -127,7 +127,7 @@ function createHTML(items, con1, con2, con3) {
 
   items.map(pic => {
     let len = pic.className.length;
-    let len_con = callCon(con1).len;
+    let len_con = createCon(con1).len;
     let con_title = "";
     let con_desc = "";
 
@@ -140,14 +140,14 @@ function createHTML(items, con1, con2, con3) {
     for (let i = 0; i < len_con; i++) {
       for (let j = 0; j < len; j++) {
         if(j == 0) {
-          con_title = callCon(con1).title[i];
-          con_desc = callCon(con1).desc[i];
+          con_title = createCon(con1).title[i];
+          con_desc = createCon(con1).desc[i];
         } else if (j == 1) {
-          con_title = callCon(con2).title[i];
-          con_desc = callCon(con2).desc[i];
+          con_title = createCon(con2).title[i];
+          con_desc = createCon(con2).desc[i];
         } else {
-          con_title = callCon(con3).title[i];
-          con_desc = callCon(con3).desc[i];
+          con_title = createCon(con3).title[i];
+          con_desc = createCon(con3).desc[i];
         }
         
         tags += `
@@ -169,7 +169,7 @@ function createHTML(items, con1, con2, con3) {
 }
 
 //data.json의 title, description키값 가져오는 함수
-function callCon(item){
+function createCon(item){
   let title = item.title;
   let desc = item.description;
   let len = title.length;

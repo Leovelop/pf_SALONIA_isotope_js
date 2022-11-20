@@ -153,6 +153,7 @@ main {
   position: relative;
   margin-left: 300px;
   padding: 20px;
+  min-height: 1000px;
 }
 main.on #sort {
   opacity: 1;

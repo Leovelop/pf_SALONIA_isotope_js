@@ -151,6 +151,7 @@ main {
   position: relative;
   margin-left: $headerWid;
   padding: 20px;
+  min-height: 1000px;
 
   &.on {
     #sort {
