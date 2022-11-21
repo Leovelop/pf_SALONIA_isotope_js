@@ -162,6 +162,7 @@ main.on #sort {
 main .loading {
   width: 100px;
   position: fixed;
+  z-index: 3;
 }
 main #sort {
   width: 100%;
