@@ -164,6 +164,10 @@ main .loading {
   position: fixed;
   z-index: 3;
   left: 50%;
+  transition: 1s;
+}
+main .loading.off {
+  opacity: 0;
 }
 main #sort {
   width: 100%;
