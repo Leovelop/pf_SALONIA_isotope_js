@@ -159,6 +159,10 @@ main.on #sort {
   opacity: 1;
   transform: translateY(0px);
 }
+main .loading {
+  width: 100px;
+  position: fixed;
+}
 main #sort {
   width: 100%;
   opacity: 0;

@@ -160,6 +160,12 @@ main {
     }
   }
 
+  .loading {
+    width: 100px;
+    position: fixed;
+    //z-index: 3;
+  }
+
   #sort {
     width: 100%;
     opacity: 0;
