@@ -166,6 +166,7 @@ main {
     z-index: 3;
     left: 50%;
     transition: 1s;
+    display: none;
 
     &.off {
       opacity: 0;

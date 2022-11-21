@@ -2,6 +2,7 @@
 let grid;
 
 const className_on = "on";
+const className_off = "off";
 const url = `./data/data.json`;
 
 //header#header
@@ -212,6 +213,7 @@ function isoLayout() {
       transitionDuration: "1s"
     });
     
+    loading.classList.add(className_off);
     main.classList.add(className_on);
   }, 500);
 }

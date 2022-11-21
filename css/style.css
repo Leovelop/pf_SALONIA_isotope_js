@@ -165,6 +165,7 @@ main .loading {
   z-index: 3;
   left: 50%;
   transition: 1s;
+  display: none;
 }
 main .loading.off {
   opacity: 0;
