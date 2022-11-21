@@ -163,6 +163,7 @@ main .loading {
   width: 100px;
   position: fixed;
   z-index: 3;
+  left: 50%;
 }
 main #sort {
   width: 100%;
