@@ -12,6 +12,7 @@ let total = btns.length;
 
 //main
 const main = document.querySelector("main");
+const loading = main.querySelector(".loading");
 const sort = main.querySelector("#sort");
 const articles = sort.querySelectorAll("article");
 
