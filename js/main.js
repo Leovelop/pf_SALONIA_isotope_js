@@ -15,7 +15,7 @@ let total = btns.length;
 const main = document.querySelector("main");
 const loading = main.querySelector(".loading");
 const sort = main.querySelector("#sort");
-const articles = sort.querySelectorAll("li");
+const lis = sort.querySelectorAll("li");
 
 //section#popUp
 const popUp = document.querySelector("#popUp");
@@ -76,9 +76,9 @@ function sortFrame(target) {
 
 
 function active(){
-  const articles = sort.querySelectorAll("li");
+  const lis = sort.querySelectorAll("li");
 
-  for (let el of articles) {
+  for (let el of lis) {
     el.addEventListener("click", e => {
       e.preventDefault();
 
