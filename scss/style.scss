@@ -232,7 +232,9 @@ main {
         img {
           width: 100%;
           height: 100%;
-          transition: linear 0.3s;
+          transition: 0.5s;
+          object-fit: cover;
+          vertical-align: middle;
         }
       }
     }
