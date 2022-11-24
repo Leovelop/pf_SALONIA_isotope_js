@@ -15,7 +15,7 @@ let total = btns.length;
 const main = document.querySelector("main");
 const loading = main.querySelector(".loading");
 const sort = main.querySelector("#sort");
-const articles = sort.querySelectorAll("article");
+const articles = sort.querySelectorAll("li");
 
 //section#popUp
 const popUp = document.querySelector("#popUp");
@@ -76,7 +76,7 @@ function sortFrame(target) {
 
 
 function active(){
-  const articles = sort.querySelectorAll("article");
+  const articles = sort.querySelectorAll("li");
 
   for (let el of articles) {
     el.addEventListener("click", e => {
@@ -208,8 +208,8 @@ function delayLoading() {
 function isoLayout() {
   setTimeout(() => {
     grid = new Isotope("#sort", {
-      itemSelection: "article",
-      columnWidth: "article",
+      itemSelection: "li",
+      columnWidth: "li",
       transitionDuration: "1s"
     });
     
