@@ -186,7 +186,6 @@ main #sort li > div {
   height: 100%;
   position: relative;
   overflow: hidden;
-  cursor: pointer;
 }
 main #sort li > div:hover img {
   filter: blur(3px);
