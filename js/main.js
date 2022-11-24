@@ -153,7 +153,7 @@ function createHTML(items, con1, con2, con3) {
         }
         
         tags += `
-              <article class="${pic.className[j]}">
+              <li class="${pic.className[j]}">
                 <div>
                   <img src="${pic.src[j] + (i + 1)}.jpg" alt="${pic.alt[j] + (i + 1)}">
                   <div>
@@ -161,7 +161,7 @@ function createHTML(items, con1, con2, con3) {
                     <p>${con_desc}</p>
                   </div>
                 </div>
-              </article>
+              </li>
         `;
       }
     }
