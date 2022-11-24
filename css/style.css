@@ -181,29 +181,29 @@ main #sort li {
   float: left;
   padding: 10px;
 }
-main #sort li > div {
+main #sort li .inner {
   width: 100%;
   height: 100%;
   position: relative;
   overflow: hidden;
 }
-main #sort li > div:hover img {
+main #sort li .inner:hover img {
   filter: blur(3px);
   transform: scale(1.1);
 }
-main #sort li > div:hover div h2,
-main #sort li > div:hover div p {
+main #sort li .inner:hover div h2,
+main #sort li .inner:hover div p {
   opacity: 1;
   transform: translateY(0%);
 }
-main #sort li > div div {
+main #sort li .inner div {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: 0;
   padding: 0px 30px;
 }
-main #sort li > div div h2 {
+main #sort li .inner div h2 {
   font: bold 22px/1 "Poiret One";
   color: #fff;
   letter-spacing: 1px;
@@ -213,7 +213,7 @@ main #sort li > div div h2 {
   transition: 0.5s;
   transform: translateY(-100%);
 }
-main #sort li > div div p {
+main #sort li .inner div p {
   font: 10px/1.2 "Noto Sans KR";
   color: #ddd;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
@@ -221,7 +221,7 @@ main #sort li > div div p {
   transition: 0.5s;
   transform: translateY(100%);
 }
-main #sort li > div img {
+main #sort li .inner img {
   width: 100%;
   height: 100%;
   transition: 0.5s;
