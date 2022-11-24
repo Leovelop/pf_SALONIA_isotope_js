@@ -181,7 +181,7 @@ main {
 
     $num: 4;
 
-    article {
+    li {
       width: calc(100% / $num);
       float: left;
       padding: 10px;
