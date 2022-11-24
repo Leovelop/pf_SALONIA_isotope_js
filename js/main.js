@@ -5,6 +5,8 @@ const className_on = "on";
 const className_off = "off";
 const url = `./data/data.json`;
 
+const body = document.querySelector("body");
+
 //header#header
 const header = document.querySelector("#header");
 const menu = header.querySelector(".menu");
@@ -214,6 +216,7 @@ function isoLayout() {
       transitionDuration: "1s"
     });
     
+    body.style.overflow = "auto";
     mask.classList.add(className_off);
     loading.classList.add(className_off);
     main.classList.add(className_on);
