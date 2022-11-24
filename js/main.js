@@ -22,6 +22,7 @@ const popUp = document.querySelector("#popUp");
 const aside = popUp.querySelector("aside");
 const close = popUp.querySelector("span");
 
+const mask = document.querySelector(".mask");
 
 /* 이벤트 연결---------------------------------------- */
 callData(url);
@@ -213,6 +214,7 @@ function isoLayout() {
       transitionDuration: "1s"
     });
     
+    mask.classList.add(className_off);
     loading.classList.add(className_off);
     main.classList.add(className_on);
   }, 500);

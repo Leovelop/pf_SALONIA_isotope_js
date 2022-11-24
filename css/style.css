@@ -153,7 +153,6 @@ main {
   position: relative;
   margin-left: 300px;
   padding: 20px;
-  min-height: 1000px;
 }
 main.on #sort {
   opacity: 1;
@@ -162,10 +161,11 @@ main.on #sort {
 main .loading {
   width: 100px;
   position: fixed;
-  z-index: 3;
+  z-index: 13;
+  top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
   transition: 1s;
-  display: none;
 }
 main .loading.off {
   opacity: 0;
@@ -186,6 +186,7 @@ main #sort li .inner {
   height: 100%;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 main #sort li .inner:hover img {
   filter: blur(3px);
@@ -304,21 +305,26 @@ main #popUp.on {
 }
 
 .mask {
-  position: absolute;
+  position: fixed;
   z-index: 10;
   width: 100%;
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   background: #000;
-  opacity: 0;
+  opacity: 1;
   top: 0px;
   left: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.5s;
 }
 .mask span {
   color: #fff;
+}
+.mask.off {
+  opacity: 0;
+  z-index: -9999;
 }
 
 @media screen and (max-width: 1599px) {
