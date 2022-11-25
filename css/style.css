@@ -332,7 +332,7 @@ main #popUp.on {
   main {
     padding: 20px;
   }
-  main #sort article {
+  main #sort li {
     width: 33.3333333333%;
   }
   main #popUp {
@@ -392,7 +392,7 @@ main #popUp.on {
     position: relative;
     margin-left: 0;
   }
-  main #sort article {
+  main #sort li {
     width: 33.3333333333%;
   }
   main #popUp {
@@ -404,7 +404,7 @@ main #popUp.on {
     display: none;
   }
 
-  main #sort article {
+  main #sort li {
     width: 50%;
   }
   main #popUp {
@@ -412,7 +412,7 @@ main #popUp.on {
   }
 }
 @media screen and (max-width: 679px) {
-  main #sort article {
+  main #sort li {
     width: 100%;
   }
   main #popUp {

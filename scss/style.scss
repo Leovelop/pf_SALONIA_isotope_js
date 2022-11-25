@@ -366,7 +366,7 @@ main {
 
       $num: 3;
 
-      article {
+      li {
         width: calc(100% / $num);
       }
     }
@@ -449,7 +449,7 @@ main {
 
       $num: 3;
 
-      article {
+      li {
         width: calc(100% / $num);
       }
     }
@@ -468,7 +468,7 @@ main {
 
       $num: 2;
 
-      article {
+      li {
         width: calc(100% / $num);
       }
     }
@@ -485,7 +485,7 @@ main {
 
       $num: 1;
 
-      article {
+      li {
         width: calc(100% / $num);
       }
     }
