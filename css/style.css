@@ -165,8 +165,8 @@ main .loading {
   z-index: 13;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 1s;
+  transform: translate(-50%, calc(-50% - 70px));
+  transition: 0.5s;
 }
 main .loading.off {
   opacity: 0;
