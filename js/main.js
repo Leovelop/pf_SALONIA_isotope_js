@@ -29,6 +29,14 @@ const mask = document.querySelector(".mask");
 /* 이벤트 연결---------------------------------------- */
 callData(url);
 
+fetch(`./data/data copy.json`)
+  .then(data => {
+    return data.json();
+  })
+  .then(pic => {
+    console.log(pic);
+  });
+
 for (let i = 0; i < total; i++) {
   btns[i].addEventListener("click", e => {
     e.preventDefault();
