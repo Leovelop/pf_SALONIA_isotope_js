@@ -33,8 +33,12 @@ fetch(`./data/data copy.json`)
   .then(data => {
     return data.json();
   })
-  .then(pic => {
-    console.log(pic);
+  .then(json => {
+    const dataInfo = json.data;
+
+    dataInfo.map((pic, index) => {
+      
+    });
   });
 
 for (let i = 0; i < total; i++) {
