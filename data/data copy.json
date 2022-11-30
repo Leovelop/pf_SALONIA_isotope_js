@@ -1,21 +1,19 @@
 {
   "data": [
     {
-      "className": [
-        "hairdresser",
-        "tools",
-        "place"
-      ],
-      "src": [
-        "./img/hairdresser/pic",
-        "./img/tools/pic",
-        "./img/place/pic"
-      ],
-      "alt": [
-        "미용사 이미지",
-        "미용 도구 이미지",
-        "미용실 이미지"
-      ]
+      "className": "hairdresser",
+      "src": "./img/hairdresser/pic",
+      "alt": "미용사 이미지"
+    },
+    {
+      "className": "tools",
+      "src": "./img/tools/pic",
+      "alt": "미용 도구 이미지"
+    },
+    {
+      "className": "place",
+      "src": "./img/place/pic",
+      "alt": "미용실 이미지"
     }
   ],
 
