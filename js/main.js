@@ -35,9 +35,11 @@ fetch(`./data/data copy.json`)
   })
   .then(json => {
     const dataInfo = json.data;
+    console.log(`data 객체의 갯수: ${dataInfo.length}`);
 
     dataInfo.map((pic, index) => {
-      
+      console.log(pic);
+      console.log(index);
     });
   });
 
