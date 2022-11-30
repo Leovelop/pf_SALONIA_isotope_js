@@ -130,14 +130,12 @@ function callData(url) {
 function createHTML(items, con1, con2, con3) {
   let tags = "";
 
-  items.map((pic, index) => {
+  items.map(pic => {
     let len = pic.className.length;
     let len_con = createCon(con1).len;
     let con_title = "";
     let con_desc = "";
 
-    console.log(index);
-    
     if((len != pic.src.length) || (len != pic.alt.length)) {
       console.error("data.json의 data키의 className, src, alt의 키값 개수를 똑같이 맞춰주십시오.");
       return;
