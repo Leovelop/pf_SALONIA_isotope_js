@@ -171,6 +171,8 @@ function createHTML(items, con1, con2, con3) {
         `;
       }
     }
+
+    
   });
 
   sort.innerHTML = tags;
