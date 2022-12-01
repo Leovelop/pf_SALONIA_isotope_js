@@ -63,16 +63,6 @@ close.addEventListener("click", () => {
 
 
 /* 함수 선언---------------------------------------- */
-function jsonTest(items){
-  let title = items.title;
-  let desc = items.description;
-  
-  return {
-    title: title,
-    desc: desc
-  };
-}
-
 //선택한 메뉴에 .on 추가
 function activeNav(lists, active) {
   for (let el of lists) {
