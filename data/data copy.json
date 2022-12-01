@@ -17,7 +17,12 @@
     }
   ],
 
-  
+  "conHair" : [
+    {
+      "title": "Ea commodi dolorum nemo perferendis?",
+      "description": "Sapiente quibusdam deserunt quos modi tempora tempore reiciendis dolor minima."
+    }
+  ],
   
   "hairdresserCon": {
     "title": [
