@@ -122,7 +122,6 @@ function callData(url) {
       const placeCon = json.placeCon;
 
       const dataLen = dataInfo.length;
-      console.log(dataLen);
 
       if (dataLen > 0) {
         createHTML(dataInfo, hairdresserCon, toolsCon, placeCon);
@@ -136,14 +135,11 @@ function callData(url) {
 function createHTML(items, con1, con2, con3) {
   let tags = "";
 
-  console.log(items);
-
-  items.map((pic, index) => {
+  items.map(pic => {
     let len = pic.className.length;
     let len_con = createCon(con1).len;
     let con_title = "";
     let con_desc = "";
-
 
     for (let i = 0; i < len_con; i++) {
       for (let j = 0; j < len; j++) {
