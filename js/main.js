@@ -162,7 +162,7 @@ function createHTML(items, con1, con2, con3) {
               <li class="${pic.className[j]}">
                 <div class="inner">
                   <img src="${pic.src[j] + (i + 1)}.jpg" alt="${pic.alt[j] + (i + 1)}">
-                  <div>
+                  <div class="content">
                     <h2>${con_title}</h2>
                     <p>${con_desc}</p>
                   </div>
