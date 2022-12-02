@@ -29,20 +29,6 @@ const mask = document.querySelector(".mask");
 /* 이벤트 연결---------------------------------------- */
 callData(url);
 
-fetch(`./data/data copy.json`)
-  .then(data => {
-    return data.json();
-  })
-  .then(json => {
-    const dataInfo = json.data;
-    console.log(`data 객체의 갯수: ${dataInfo.length}`);
-
-    dataInfo.map((pic, index) => {
-      console.log(pic);
-      console.log(index);
-    });
-  });
-
 for (let i = 0; i < total; i++) {
   btns[i].addEventListener("click", e => {
     e.preventDefault();
@@ -60,6 +46,19 @@ close.addEventListener("click", () => {
   popUp.classList.remove("on");
 });
 
+/*fetch(`./data/data copy.json`)
+  .then(data => {
+    return data.json();
+  })
+  .then(json => {
+    const dataInfo = json.data;
+    console.log(`data 객체의 갯수: ${dataInfo.length}`);
+
+    dataInfo.map((pic, index) => {
+      console.log(pic);
+      console.log(index);
+    });
+  });*/
 
 
 /* 함수 선언---------------------------------------- */
@@ -82,7 +81,7 @@ function sortFrame(target) {
 }
 
 
-function active(){
+function active() {
   const lis = sort.querySelectorAll("li");
 
   for (let el of lis) {
@@ -122,7 +121,7 @@ function callData(url) {
       const toolsCon = json.toolsCon;
       const placeCon = json.placeCon;
 
-      if(dataInfo.length > 0) {
+      if (dataInfo.length > 0) {
         createHTML(dataInfo, hairdresserCon, toolsCon, placeCon);
         delayLoading();
         active();
@@ -134,20 +133,20 @@ function callData(url) {
 function createHTML(items, con1, con2, con3) {
   let tags = "";
 
-  items.map(pic => {
+  items.map((pic, index) => {
     let len = pic.className.length;
     let len_con = createCon(con1).len;
     let con_title = "";
     let con_desc = "";
 
-    if((len != pic.src.length) || (len != pic.alt.length)) {
+    if ((len != pic.src.length) || (len != pic.alt.length)) {
       console.error("data.json의 data키의 className, src, alt의 키값 개수를 똑같이 맞춰주십시오.");
       return;
     }
 
     for (let i = 0; i < len_con; i++) {
       for (let j = 0; j < len; j++) {
-        if(j == 0) {
+        if (j == 0) {
           con_title = createCon(con1).title[i];
           con_desc = createCon(con1).desc[i];
         } else if (j == 1) {
@@ -157,7 +156,7 @@ function createHTML(items, con1, con2, con3) {
           con_title = createCon(con3).title[i];
           con_desc = createCon(con3).desc[i];
         }
-        
+
         tags += `
               <li class="${pic.className[j]}">
                 <div class="inner">
@@ -172,25 +171,25 @@ function createHTML(items, con1, con2, con3) {
       }
     }
 
-    
+
   });
 
   sort.innerHTML = tags;
 }
 
 //data.json의 title, description키값 가져오는 함수
-function createCon(item){
+function createCon(item) {
   let title = item.title;
   let desc = item.description;
   let len = title.length;
 
-  if(len != desc.length) {
+  if (len != desc.length) {
     console.error("title과 desc의 키값 개수를 동일하게 맞춰주십시오.");
     return;
   }
 
   return {
-    title: title, 
+    title: title,
     desc: desc,
     len: len
   };
@@ -208,7 +207,7 @@ function delayLoading() {
       count++;
 
       if (count == len) isoLayout();
-    }    
+    }
   }
 }
 
@@ -220,7 +219,7 @@ function isoLayout() {
       columnWidth: "li",
       transitionDuration: "1s"
     });
-    
+
     body.style.overflow = "auto";
     mask.classList.add(className_off);
     loading.classList.add(className_off);
