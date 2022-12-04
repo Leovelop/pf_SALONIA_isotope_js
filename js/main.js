@@ -46,19 +46,17 @@ close.addEventListener("click", () => {
   popUp.classList.remove("on");
 });
 
-/*fetch(`./data/data copy.json`)
+fetch(`./data/data copy.json`)
   .then(data => {
     return data.json();
   })
   .then(json => {
-    const dataInfo = json.data;
-    console.log(`data 객체의 갯수: ${dataInfo.length}`);
+    const conInfo = json.conTools;
 
-    dataInfo.map((pic, index) => {
-      console.log(pic);
-      console.log(index);
+    conInfo.map((con, index) => {
+      console.log(index, con);
     });
-  });*/
+  });
 
 
 /* 함수 선언---------------------------------------- */
@@ -120,6 +118,10 @@ function callData(url) {
       const hairdresserCon = json.hairdresserCon;
       const toolsCon = json.toolsCon;
       const placeCon = json.placeCon;
+
+      const conHairdresser = json.conHairdresser;
+      const conTools =  json.conTools;
+      const conPlace = json.conPlace;
 
       const dataLen = dataInfo.length;
 
