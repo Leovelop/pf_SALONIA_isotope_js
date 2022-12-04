@@ -128,6 +128,7 @@ function callData(url) {
 
       if (dataLen > 0) {
         createHTML(dataInfo, hairdresserCon, toolsCon, placeCon);
+        createCon2(conHairdresser, conTools, conPlace);
         delayLoading();
         active();
       }
@@ -136,7 +137,7 @@ function callData(url) {
 
 
 
-function createCon2() {
+function createCon2(conInfo1, conInfo2, conInfo3) {
   const lis = sort.querySelectorAll("li");
 
   lis.forEach(li => {
@@ -219,7 +220,7 @@ function delayLoading() {
     el.onload = () => {
       count++;
 
-      if (count == len) isoLayout(), createCon2();
+      if (count == len) isoLayout();
     }
   }
 }
