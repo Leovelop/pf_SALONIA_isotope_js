@@ -138,13 +138,27 @@ function callData(url) {
 
 
 function createCon2(conInfo1, conInfo2, conInfo3) {
-  const lis = sort.querySelectorAll("li");
+  /*const lis = sort.querySelectorAll("li");
 
   lis.forEach(li => {
     const con_title = li.querySelector(".content h2");
     const con_desc = li.querySelector(".content p");
 
     console.log(con_title, con_desc);
+  });*/
+
+  const lis_hair = sort.querySelectorAll("li.hairdresser");
+
+  lis_hair.forEach(li => {
+    const con_title = li.querySelector(".content h2");
+    const con_desc = li.querySelector(".content p");
+    console.log(con_title, con_desc);
+
+  });
+
+  
+  conInfo1.map((con, index) => {
+
   });
 }
 
