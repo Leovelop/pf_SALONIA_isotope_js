@@ -135,31 +135,44 @@ function callData(url) {
     });
 }
 
-
+function callCon(item){
+  
+}
 
 function createCon2(conInfo1, conInfo2, conInfo3) {
   /*const lis = sort.querySelectorAll("li");
 
-  lis.forEach(li => {
-    const con_title = li.querySelector(".content h2");
-    const con_desc = li.querySelector(".content p");
+  conInfo1.forEach(con => {
+    return {
+      title: con.title, 
+      desc: con.description
+    };
+  });*/
+  
+  /*lis.forEach(li => {
+    let con_title = li.querySelector(".content h2");
+    let con_desc = li.querySelector(".content p");
 
-    console.log(con_title, con_desc);
+    if(li.classList.contains(".hairdresser")) {
+      con_title = conInfo1.title;
+    }
+
+    con_title = conInfo1.title;
   });*/
 
   const lis_hair = sort.querySelectorAll("li.hairdresser");
 
   lis_hair.forEach(li => {
-    const con_title = li.querySelector(".content h2");
-    const con_desc = li.querySelector(".content p");
-    console.log(con_title, con_desc);
+    let con_title = li.querySelector(".content h2");
+    let con_desc = li.querySelector(".content p");
 
-  });
-  
-  conInfo1.map((con, index) => {
-
+    conInfo1.map(con => {
+      con_title.innerHTML = con.title;
+      con_desc.innerHTML = con.desc;
+    });
   });
 }
+
 
 
 //section#sort에 태그들을 생성하는 함수
@@ -174,7 +187,7 @@ function createHTML(items, con1, con2, con3) {
 
     for (let i = 0; i < len_con; i++) {
       for (let j = 0; j < len; j++) {
-        if (j == 0) {
+        /*if (j == 0) {
           con_title = createCon(con1).title[i];
           con_desc = createCon(con1).desc[i];
         } else if (j == 1) {
@@ -183,15 +196,15 @@ function createHTML(items, con1, con2, con3) {
         } else {
           con_title = createCon(con3).title[i];
           con_desc = createCon(con3).desc[i];
-        }
+        }*/
 
         tags += `
               <li class="${pic.className[j]}">
                 <div class="inner">
                   <img src="${pic.src[j] + (i + 1)}.jpg" alt="${pic.alt[j] + (i + 1)}">
                   <div class="content">
-                    <h2>${con_title}</h2>
-                    <p>${con_desc}</p>
+                    <h2></h2>
+                    <p></p>
                   </div>
                 </div>
               </li>
