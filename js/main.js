@@ -140,7 +140,9 @@ function createCon2() {
   const lis = sort.querySelectorAll("li");
 
   lis.forEach(li => {
-    console.log(li);
+    const contents = li.querySelector(".content");
+    const con_title = contents.querySelector("h2");
+    const con_desc = contents.querySelector("p");
   });
 }
 
