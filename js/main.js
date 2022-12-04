@@ -17,7 +17,6 @@ let total = btns.length;
 const main = document.querySelector("main");
 const loading = main.querySelector(".loading");
 const sort = main.querySelector("#sort");
-//const lis = sort.querySelectorAll("li");
 
 
 //section#popUp
