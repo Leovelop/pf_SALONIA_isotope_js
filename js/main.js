@@ -133,6 +133,10 @@ function callData(url) {
     });
 }
 
+function createCon2(){
+  
+}
+
 //section#sort에 태그들을 생성하는 함수
 function createHTML(items, con1, con2, con3) {
   let tags = "";
@@ -193,7 +197,6 @@ function createCon(item) {
     len: len
   };
 }
-
 
 //이미지들이 전부 로딩이 되면 isoLayout()을 실행하는 함수
 function delayLoading() {
