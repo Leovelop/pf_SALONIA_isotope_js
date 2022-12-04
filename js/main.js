@@ -17,7 +17,8 @@ let total = btns.length;
 const main = document.querySelector("main");
 const loading = main.querySelector(".loading");
 const sort = main.querySelector("#sort");
-const lis = sort.querySelectorAll("li");
+//const lis = sort.querySelectorAll("li");
+
 
 //section#popUp
 const popUp = document.querySelector("#popUp");
@@ -54,7 +55,7 @@ fetch(`./data/data copy.json`)
     const conInfo = json.conTools;
 
     conInfo.map((con, index) => {
-      console.log(index, con);
+      //console.log(index, con);
     });
   });
 
@@ -121,7 +122,7 @@ function callData(url) {
       const placeCon = json.placeCon;
 
       const conHairdresser = json.conHairdresser;
-      const conTools =  json.conTools;
+      const conTools = json.conTools;
       const conPlace = json.conPlace;
 
       const dataLen = dataInfo.length;
@@ -134,9 +135,16 @@ function callData(url) {
     });
 }
 
-function createCon2(con1, con2, con3){
-  
+
+
+function createCon2() {
+  const lis = sort.querySelectorAll("li");
+
+  lis.forEach(li => {
+    console.log(li);
+  });
 }
+
 
 //section#sort에 태그들을 생성하는 함수
 function createHTML(items, con1, con2, con3) {
@@ -209,7 +217,7 @@ function delayLoading() {
     el.onload = () => {
       count++;
 
-      if (count == len) isoLayout();
+      if (count == len) isoLayout(), createCon2();
     }
   }
 }
