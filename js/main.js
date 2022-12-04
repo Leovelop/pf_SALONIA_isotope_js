@@ -135,9 +135,6 @@ function callData(url) {
     });
 }
 
-function callCon(item){
-  
-}
 
 function createCon2(conInfo1, conInfo2, conInfo3) {
   /*const lis = sort.querySelectorAll("li");
@@ -148,6 +145,7 @@ function createCon2(conInfo1, conInfo2, conInfo3) {
       desc: con.description
     };
   });*/
+
   
   /*lis.forEach(li => {
     let con_title = li.querySelector(".content h2");
@@ -168,7 +166,7 @@ function createCon2(conInfo1, conInfo2, conInfo3) {
 
     conInfo1.map(con => {
       con_title.innerHTML = con.title;
-      con_desc.innerHTML = con.desc;
+      con_desc.innerHTML = con.description;
     });
   });
 }
