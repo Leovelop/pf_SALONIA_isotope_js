@@ -46,17 +46,6 @@ close.addEventListener("click", () => {
   popUp.classList.remove("on");
 });
 
-fetch(`./data/data copy.json`)
-  .then(data => {
-    return data.json();
-  })
-  .then(json => {
-    const conInfo = json.conTools;
-
-    conInfo.map((con, index) => {
-      console.log(index, con);
-    });
-  });
 
 
 /* 함수 선언---------------------------------------- */
@@ -111,7 +100,8 @@ function callData(url) {
 
   fetch(url)
     .then(data => {
-      return data.json();
+      const dataPic = data.json();
+      return dataPic;
     })
     .then(json => {
       const dataInfo = json.data;
@@ -133,7 +123,7 @@ function callData(url) {
     });
 }
 
-function createCon2(){
+function createCon2(con1, con2, con3){
   
 }
 
