@@ -46,6 +46,17 @@ close.addEventListener("click", () => {
   popUp.classList.remove("on");
 });
 
+fetch(`./data/data copy.json`)
+  .then(data => {
+    return data.json();
+  })
+  .then(json => {
+    const conInfo = json.conTools;
+
+    conInfo.map((con, index) => {
+      console.log(index, con);
+    });
+  });
 
 
 /* 함수 선언---------------------------------------- */
