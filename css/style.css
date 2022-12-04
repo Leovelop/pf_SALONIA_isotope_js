@@ -170,6 +170,7 @@ main .loading {
 }
 main .loading.off {
   opacity: 0;
+  z-index: -9999;
 }
 main #sort {
   width: 100%;

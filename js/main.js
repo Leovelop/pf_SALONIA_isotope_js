@@ -155,7 +155,6 @@ function createCon2(conInfo1, conInfo2, conInfo3) {
     console.log(con_title, con_desc);
 
   });
-
   
   conInfo1.map((con, index) => {
 
