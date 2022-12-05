@@ -125,42 +125,14 @@ function callData(url) {
 }
 
 
-function createCon2(conInfo1, conInfo2, conInfo3) {
-  /*const lis = sort.querySelectorAll("li");
-
-  conInfo1.forEach(con => {
-    return {
-      title: con.title, 
-      desc: con.description
-    };
-  });*/
-
-  
-  /*lis.forEach(li => {
-    let con_title = li.querySelector(".content h2");
-    let con_desc = li.querySelector(".content p");
-
-    if(li.classList.contains(".hairdresser")) {
-      con_title = conInfo1.title;
-    }
-
-    con_title = conInfo1.title;
-  });*/
-
-
+function createCon2(conInfo) {
   //! 여기 다시 손보기!!! ----------------
-  const lis_hair = sort.querySelectorAll("li.hairdresser");
+  const lis = sort.querySelectorAll("li");
 
-  lis_hair.forEach(li => {
+  lis.forEach(li => {
     let con_title = li.querySelector(".content h2");
     let con_desc = li.querySelector(".content p");
-
-    conInfo1.map(con => {
-      con_title.innerHTML = con.title;
-      con_desc.innerHTML = con.description;
-    });
   });
-  
 }
 
 
