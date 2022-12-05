@@ -128,7 +128,7 @@ function callData(url) {
 
       if (dataLen > 0) {
         createHTML(dataInfo, hairdresserCon, toolsCon, placeCon);
-        createCon2(conHairdresser, conTools, conPlace);
+        //createCon2(conHairdresser, conTools, conPlace);
         delayLoading();
         active();
       }
@@ -158,6 +158,8 @@ function createCon2(conInfo1, conInfo2, conInfo3) {
     con_title = conInfo1.title;
   });*/
 
+
+  //! 여기 다시 손보기!!! ----------------
   const lis_hair = sort.querySelectorAll("li.hairdresser");
 
   lis_hair.forEach(li => {
@@ -169,6 +171,7 @@ function createCon2(conInfo1, conInfo2, conInfo3) {
       con_desc.innerHTML = con.description;
     });
   });
+  
 }
 
 
@@ -185,7 +188,7 @@ function createHTML(items, con1, con2, con3) {
 
     for (let i = 0; i < len_con; i++) {
       for (let j = 0; j < len; j++) {
-        /*if (j == 0) {
+        if (j == 0) {
           con_title = createCon(con1).title[i];
           con_desc = createCon(con1).desc[i];
         } else if (j == 1) {
@@ -194,15 +197,15 @@ function createHTML(items, con1, con2, con3) {
         } else {
           con_title = createCon(con3).title[i];
           con_desc = createCon(con3).desc[i];
-        }*/
+        }
 
         tags += `
               <li class="${pic.className[j]}">
                 <div class="inner">
                   <img src="${pic.src[j] + (i + 1)}.jpg" alt="${pic.alt[j] + (i + 1)}">
                   <div class="content">
-                    <h2></h2>
-                    <p></p>
+                    <h2>${con_title}</h2>
+                    <p>${con_desc}</p>
                   </div>
                 </div>
               </li>
