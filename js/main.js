@@ -126,7 +126,6 @@ function callData(url) {
 
 
 function createCon2(conInfo) {
-  //! 여기 다시 손보기!!! ----------------
   const lis = sort.querySelectorAll("li");
 
   lis.forEach(li => {
