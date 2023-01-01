@@ -124,28 +124,6 @@ function callData(url) {
 }
 
 
-function createCon2(conInfo) {
-  const lis = sort.querySelectorAll("li");
-  let tags = "";
-  let con_title = "";
-  let con_desc = "";
-
-  for(let li of lis){
-    let content = li.querySelector(".content");
-    let isClass = li.className;
-
-    tags += `
-
-    `;
-    
-    if(isClass == "hairdresser") {
-      
-    }
-  }
-}
-
-
-
 //section#sort에 태그들을 생성하는 함수
 function createHTML(items, con1, con2, con3) {
   let tags = "";
