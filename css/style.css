@@ -92,6 +92,41 @@ body {
   width: 100%;
   top: 20vh;
   padding: 0px 30px;
+  /*.sns {
+    margin-top: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    li {
+      margin-right: 15px;
+
+      &:hover {
+        a {
+          border-color: $colorFont;
+
+          i {
+            color: $colorFont;
+          }
+        }
+      }
+
+      a {
+        display: inline-block;
+        border: 1px solid #aaa;
+        border-radius: 50%;
+        padding: 10px;
+        transition: 0.5s;
+        font-size: 0px;
+
+        i {
+          font-size: 18px;
+          color: #ddd;
+          transition: 0.5s;
+        }
+      }
+    }
+  }*/
 }
 #header .menu #gnb li {
   cursor: pointer;
@@ -112,34 +147,6 @@ body {
   font: 17px/1 "Poiret One";
   color: #ddd;
   padding: 10px 0px;
-  transition: 0.5s;
-}
-#header .menu #gnb .sns {
-  margin-top: 20px;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-}
-#header .menu #gnb .sns li {
-  margin-right: 15px;
-}
-#header .menu #gnb .sns li:hover a {
-  border-color: orange;
-}
-#header .menu #gnb .sns li:hover a i {
-  color: orange;
-}
-#header .menu #gnb .sns li a {
-  display: inline-block;
-  border: 1px solid #aaa;
-  border-radius: 50%;
-  padding: 10px;
-  transition: 0.5s;
-  font-size: 0px;
-}
-#header .menu #gnb .sns li a i {
-  font-size: 18px;
-  color: #ddd;
   transition: 0.5s;
 }
 #header p {
