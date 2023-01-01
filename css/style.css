@@ -132,6 +132,12 @@ body {
   cursor: pointer;
   transition: 0.5s;
 }
+#header .menu #gnb li.sns {
+  float: left;
+}
+#header .menu #gnb li.sns a {
+  padding: 0px 15px;
+}
 #header .menu #gnb li.on {
   background: #111;
 }

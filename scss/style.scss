@@ -75,6 +75,13 @@ body {
         cursor: pointer;
         transition: 0.5s;
 
+        &.sns {
+          float: left;
+          a {
+            padding: 0px 15px;
+          }
+        }
+
         &.on {
           background: #111;
 
