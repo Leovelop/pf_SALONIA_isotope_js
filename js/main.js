@@ -117,7 +117,6 @@ function callData(url) {
 
       if (dataLen > 0) {
         createHTML(dataInfo, hairdresserCon, toolsCon, placeCon);
-        //createCon2(conHairdresser, conTools, conPlace);
         delayLoading();
         active();
       }
