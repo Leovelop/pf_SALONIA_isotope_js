@@ -127,11 +127,22 @@ function callData(url) {
 
 function createCon2(conInfo) {
   const lis = sort.querySelectorAll("li");
+  let tags = "";
+  let con_title = "";
+  let con_desc = "";
 
-  lis.forEach(li => {
-    let con_title = li.querySelector(".content h2");
-    let con_desc = li.querySelector(".content p");
-  });
+  for(let li of lis){
+    let content = li.querySelector(".content");
+    let isClass = li.className;
+
+    tags += `
+
+    `;
+    
+    if(isClass == "hairdresser") {
+      
+    }
+  }
 }
 
 
