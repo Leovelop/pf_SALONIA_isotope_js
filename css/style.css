@@ -144,6 +144,9 @@ body {
   align-items: center;
   font-size: 0;
 }
+#header .menu #gnb li.sns a i {
+  font-size: 14px;
+}
 #header .menu #gnb li.on {
   background: #111;
 }
