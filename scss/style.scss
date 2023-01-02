@@ -85,6 +85,9 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
+            font-size: 0;
+
+          
           }
         }
 
@@ -100,6 +103,7 @@ body {
         &:hover {
           a {
             color: $colorFont;
+            border-color: $colorFont;
           }
         }
 

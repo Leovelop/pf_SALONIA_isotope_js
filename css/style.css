@@ -142,6 +142,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 0;
 }
 #header .menu #gnb li.on {
   background: #111;
@@ -152,6 +153,7 @@ body {
 }
 #header .menu #gnb li:hover a {
   color: orange;
+  border-color: orange;
 }
 #header .menu #gnb li a {
   display: inline-block;
