@@ -134,6 +134,7 @@ body {
 }
 #header .menu #gnb li.sns {
   float: left;
+  margin-top: 20px;
 }
 #header .menu #gnb li.sns a {
   padding: 7px;
@@ -143,6 +144,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 0;
+  margin-right: 10px;
 }
 #header .menu #gnb li.sns a i {
   font-size: 14px;
