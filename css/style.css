@@ -133,10 +133,13 @@ body {
   transition: 0.5s;
 }
 #header .menu #gnb li.sns {
-  display: flex;
+  float: left;
 }
 #header .menu #gnb li.sns a {
   border: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #header .menu #gnb li.on {
   background: #111;

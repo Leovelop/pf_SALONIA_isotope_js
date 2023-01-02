@@ -76,12 +76,15 @@ body {
         transition: 0.5s;
 
         &.sns {
-          display: flex;
-          //justify-content: left;
+          float: left;
+
           a {
             //padding: 10px;
             border: 1px solid #ddd;
             //border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
           }
         }
 
