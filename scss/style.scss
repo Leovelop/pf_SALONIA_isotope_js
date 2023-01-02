@@ -76,7 +76,8 @@ body {
         transition: 0.5s;
 
         &.sns {
-          float: left;
+          display: flex;
+          //justify-content: left;
           a {
             //padding: 10px;
             border: 1px solid #ddd;
