@@ -78,7 +78,9 @@ body {
         &.sns {
           float: left;
           a {
-            padding: 0px 15px;
+            //padding: 10px;
+            border: 1px solid #ddd;
+            //border-radius: 50%;
           }
         }
 

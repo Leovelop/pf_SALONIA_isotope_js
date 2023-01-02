@@ -136,7 +136,7 @@ body {
   float: left;
 }
 #header .menu #gnb li.sns a {
-  padding: 0px 15px;
+  border: 1px solid #ddd;
 }
 #header .menu #gnb li.on {
   background: #111;
